@@ -1,0 +1,46 @@
+.countdown{
+    background-color: #282C35;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    margin-left: -3rem;
+    margin-top: -3rem;
+    padding-top: 15rem;
+    display:block;
+   
+    animation: timer 3s linear;
+   //visibility:visible;
+
+    
+}
+
+#timer{
+    font-size: 30rem;
+    color: #36454f;
+    // transition: all 2s;
+ 
+  
+}
+#enter{
+   
+    font-size: 10rem;
+   // display: none;
+
+    margin-top: 10rem;
+    font-weight: 300;
+    
+}
+#enter span{
+    opacity: 0;
+    transition: all 1s linear ;
+    transition-delay: 1.2s;
+    
+    color: $color-white;
+}
+#enter span.anime{
+opacity: 1;
+color: #36454f;
+
+}
+

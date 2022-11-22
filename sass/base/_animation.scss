@@ -1,0 +1,83 @@
+@keyframes moveInBack {
+  0% {
+    opacity: 0;
+    transform: rotateX(100deg) translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+  }
+}
+@keyframes header {
+  0% {
+    opacity: 0;
+    transform: translateX(-150rem);
+  }
+  50% {
+    opacity: .5;
+    transform:  scale(1.1);
+  }
+ 
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes headerRotate{
+    0%{
+        transform:rotateX(5deg)
+    }
+    100%{
+        transform:rotateX(-5deg)
+    }
+}
+@keyframes timer{
+    0%{
+        opacity: 1;
+    }
+  
+    100%{
+        opacity: 0;
+
+    }
+}
+
+@keyframes widgets{
+    0%{
+        
+        transform:translateY(20rem);
+        
+    }
+    100%{
+      
+        transform:translateY(0);
+    }
+}
+
+//navbar animation
+
+@keyframes moveOut{
+  0%{
+    opacity: 0;
+    transform: scaleX(0)
+  }
+  100%{
+    opacity: 1;
+ transform: scaleX(1);
+ //background-color: orangered;
+  }
+}
+
+//widget animation for mobile
+
+@keyframes widgets_mob{
+  0%{
+      
+      transform:translateY(-20rem);
+      
+  }
+  100%{
+    
+      transform:translateY(0);
+  }
+}

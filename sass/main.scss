@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'dune-rise'; /*a name to be used later*/
+    src: url('../css/fonts/kizard.otf'); /*URL to font*/
+}
+
+
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import 'components/about';
+@import 'components/timer';
+
+@import "layout/header";
+@import "layout/navigation";
+@import 'layout/mediaQuery';
+
+@import 'pages/home'
