@@ -226,7 +226,7 @@ body {
     margin-top: 0; }
   .header {
     border-radius: 0px;
-    height: 97vh; }
+    height: 100vh; }
     .header__widgets__clock {
       position: absolute;
       top: 2%;
@@ -280,7 +280,8 @@ body {
 
 @media screen and (max-width: 720px) {
   .nav {
-    width: 40%; }
+    width: 40%;
+    margin-bottom: 4rem; }
     .nav__listItem {
       font-size: 1rem; }
       .nav__listItem:not(:last-child) {
