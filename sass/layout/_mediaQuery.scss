@@ -9,6 +9,7 @@
     }
     .header{
    border-radius: 0px;
+   animation: header__mob 1.5s linear;
    height: 100vh;
         &__widgets__clock{
             position: absolute;

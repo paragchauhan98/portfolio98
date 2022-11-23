@@ -55,6 +55,14 @@
   100% {
     transform: translateY(0); } }
 
+@keyframes header__mob {
+  0% {
+    opacity: 0;
+    transform: translateX(-150rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -123,6 +131,7 @@ body {
   overflow: hidden;
   animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
   z-index: -5;
+  width: 100%;
   display: none; }
   .header__textbox {
     color: white;
@@ -226,6 +235,7 @@ body {
     margin-top: 0; }
   .header {
     border-radius: 0px;
+    animation: header__mob 1.5s linear;
     height: 100vh; }
     .header__widgets__clock {
       position: absolute;

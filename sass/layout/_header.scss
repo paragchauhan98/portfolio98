@@ -5,7 +5,7 @@
     overflow: hidden;
     animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
     z-index:-5;
-    
+    width: 100%;
     display:none;
     
     &__textbox{
