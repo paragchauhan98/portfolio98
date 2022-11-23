@@ -109,9 +109,10 @@ function printTime() {
       navigation.style.boxShadow="0 1rem 12rem black"
     document.documentElement.style.setProperty('--color', "rgb(174, 7, 7)");
   }
+ 
   if(period=="AM"){
     navigation.style.backgroundColor="#97ABFF"
-    document.documentElement.style.setProperty('--color', "#97ABFF");
+    document.documentElement.style.setProperty('--color', "rgb(133, 156, 250)");
   }
   if (hour < 10) {
     hour = "0" + hour;
