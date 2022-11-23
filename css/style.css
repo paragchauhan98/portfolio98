@@ -125,7 +125,7 @@ body {
   color: #36454f; }
 
 .header {
-  background-image: linear-gradient(to bottom, #173ca2 45%, #97ABFF 135%);
+  background-image: linear-gradient(to bottom, #173ca2 45%, black 135%);
   height: 94vh;
   border-radius: 15px;
   overflow: hidden;
@@ -248,16 +248,16 @@ body {
       color: white;
       animation: widgets_mob 1.25s linear .5s; }
       .header__widgets__clock--day {
-        margin-right: 3.3rem;
+        margin-right: 3rem;
         margin-bottom: .5rem;
         align-self: flex-end; }
       .header__widgets__clock--time {
         align-self: flex-end;
-        margin-right: 3.3rem;
+        margin-right: 3rem;
         margin-bottom: .5rem; }
       .header__widgets__clock--icon {
         align-self: flex-end;
-        margin-right: 3.3rem;
+        margin-right: 3rem;
         font-size: 1.5rem;
         transition: all .2s linear; }
         .header__widgets__clock--icon:hover {
