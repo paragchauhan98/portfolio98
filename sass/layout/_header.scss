@@ -1,7 +1,7 @@
 .header{
     background-image: linear-gradient( to bottom, #173ca2 45%,#97ABFF 135%);
-    height: 94vh;
-    border-radius: 15px;
+    height: 100vh;
+   
    // overflow: hidden;
     animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
   //  z-index:-5;
@@ -10,27 +10,27 @@
     display:none;
     //z-index: 500;
     
-    &__textbox{
-        color: white;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-75%)
-    }
+    // &__textbox{
+    //     color: white;
+    //     text-align: center;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%,-75%)
+    // }
 
-  
+ 
        
         
      
 &__widgets__clock{
     position: absolute;
-    bottom: 1.5rem;
-    right: 6rem;
+    top: .39rem;
+    right: 3rem;
     display: flex;
     flex-direction: row;
     font-size: 1.4rem;
-    color: white;
+    color: #A27BB8;
     animation: widgets 1.25s linear .5s;
   
     
@@ -38,7 +38,7 @@
        
         &--day{
             margin-right: 2rem;
-            display:block;
+          
             align-self:center;
             
         }
@@ -54,43 +54,93 @@
           transform:rotateZ(366deg)
           }
         }
-    }
-    &__widgets__weather{
-        position: absolute;
-        bottom: 1rem;
-        left: 6rem;
-      
-        display: flex;
-        flex-direction: row;
-        font-size: 1.4rem;
-        color: white;
-        animation: widgets 1.30s linear .5s;
-       
-        
         &--city{
             margin-right: 2rem;
+           
             align-self:center;
           
         }
         &--temp{
             margin-right: 2rem;
+           margin-top: -.1rem;
             align-self:center;
             
         }
         &--icon{
+            margin-right: 2rem;
+           
             align-self:center;
             
            img{
-            width:2.5rem;
+            width:2rem;
             height:auto;
           
            }
         }
       
     }
+    // }
+    // &__widgets__weather{
+    //     position: absolute;
+    //     bottom: 1rem;
+    //     left: 6rem;
+      
+    //     display: flex;
+    //     flex-direction: row;
+    //     font-size: 1.4rem;
+    //     color: white;
+    //     animation: widgets 1.30s linear .5s;
+       
+        
+      
     }
-.scrollIn{
-z-index:-2000;
-    animation: scrollIn 1.5s linear;
-   
-}
+    .outer{
+        position: absolute;
+            background: #b4b4b4;
+            opacity: 0.9;
+           display: block;
+           width:100%;
+            top: 0%;
+            padding: .5rem 0rem;
+            left: 0;
+       
+           &.macBar{
+            
+              background: #f6f6f6; /* Old browsers */
+              background: -moz-linear-gradient(top,  #f6f6f6 0%, #dadada 100%); /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#dadada)); /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(top,  #f6f6f6 0%,#dadada 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(top,  #f6f6f6 0%,#dadada 100%); /* Opera 11.10+ */
+              background: -ms-linear-gradient(top,  #f6f6f6 0%,#dadada 100%); /* IE10+ */
+              background: linear-gradient(to bottom,  #f6f6f6 0%,#dadada 100%); /* W3C */
+             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dadada',GradientType=0 ); /* IE6-9 */
+           //   border: 1px solid #d8d8d8;
+              //border-bottom: 1px solid #b4b4b4;
+            }
+          .dot {
+            display: inline-block;
+            
+            width: 1.3rem;
+            height: 1.3rem;
+            background: #f9f9f9;
+            border-radius: 50%;
+           
+                margin-left: .5rem;
+            
+            
+            &.red {
+              background: #FF6057;
+              border: 1px solid #E14640;
+            }
+          
+            &.amber {
+              background: #FFBD2E;
+              border: 1px solid #DFA123;
+            }
+          
+            &.green {
+              background: #27C93F;
+              border: 1px solid #1DAD2B;
+            }
+          }
+      }

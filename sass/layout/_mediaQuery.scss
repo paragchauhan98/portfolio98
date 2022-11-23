@@ -14,81 +14,36 @@
    height: 100vh;
         &__widgets__clock{
             position: absolute;
-            top: 2%;
-            right: .5rem;
-            align-items: flex-end;
+            top: .3rem;
+            right:-2rem;
+     
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             
             font-size: 1.2rem;
-            color: white;
-          
+            color: black;
+          margin: 0;
             animation: widgets_mob 1.25s linear .5s;
           
             
             
                
-                &--day{
-                    margin-right:3rem;
-                    margin-bottom: .5rem;
-              align-self: flex-end;
-                
-                    
-                }
-                &--time{
-                    align-self: flex-end;
-                    margin-right:3rem;
-                    margin-bottom: .5rem;
-                }
-                &--icon{
-                    align-self: flex-end;
-                    margin-right:3rem;
-                    font-size:1.5rem;
-                    transition:all .2s linear;
-                    
-                  &:hover{
-                  transform:rotateZ(360deg)
-                  }
-                }
-        }
-        &__widgets__weather{
-            position: absolute;
-            top: 2%;
-            left: .5rem;
-            align-items: flex-start;
-            display: flex;
-            flex-direction: column;
+             
+        // }
+        // &__widgets__weather{
+        //     position: absolute;
+        //     top: 2%;
+        //     left: .5rem;
+        //     align-items: flex-start;
+        //     display: flex;
+        //     flex-direction: column;
             
-            font-size: 1.2rem;
-            color: white;
+        //     font-size: 1.2rem;
+        //     color: white;
           
-            animation: widgets_mob 1.25s linear .5s;
+        //     animation: widgets_mob 1.25s linear .5s;
            
-            
-            &--city{
-                margin-left: 2.5rem;
-                margin-bottom: .5rem;
-          align-self: flex-start;
-              
-            }
-            &--temp{
-                margin-left: 2.5rem;
-                margin-bottom: .5rem;
-          align-self: flex-start;
-                
-            }
-            &--icon{
-                margin-left: 2.5rem;
-                align-self: flex-start;
-                
-               img{
-                color: white;
-                width:2.5rem;
-                height:auto;
-              
-              
-               }
-            }
+         
         }
     }
     }

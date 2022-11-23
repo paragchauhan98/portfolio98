@@ -110,4 +110,25 @@
 
 }
 //when scrolling occurs
-
+@keyframes rotateAbout{
+  0%{
+    transform: rotateY(-15deg);
+  }
+  100%{
+    transform: rotateY(15deg);
+  }
+}
+@keyframes hello{
+  0%{
+    opacity: 0;
+    transform: translateY(30rem)scale(1);
+  }
+  50%{
+    opacity: .5;
+transform: translateY(0) scale(1.1);
+  }
+  100%{
+   transform: translate(0) scale(1);
+   opacity: 1;
+  }
+}

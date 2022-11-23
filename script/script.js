@@ -40,7 +40,7 @@ function onTick() {
   span.classList.add("anime");
   char++;
 
-  if (char === splitText.length) {
+  if (char === textSplit.length) {
    
     complete();
 // header.style.display='block';
@@ -66,6 +66,7 @@ function hideDiv(){
 setTimeout("hideDiv()",3000)
 
 function showDiv(){
+    // document.querySelector('.mySlides').style.display='block';
     document.querySelector('.header').style.display='block';
     // document.querySelector('.section-about').style.display="block"
     //document.querySelector('.navigation').style.display="block"
@@ -143,10 +144,10 @@ function printTime() {
 printTime();
 
 //for weather
-var temp = document.querySelector(".header__widgets__weather--temp");
+var temp = document.querySelector(".header__widgets__clock--temp");
 console.log(temp);
 
-var icons = document.querySelector(".header__widgets__weather--icon");
+var icons = document.querySelector(".header__widgets__clock--icon");
 console.log(icons);
 //converting kelvin to celsius
 function convert(val) {
@@ -175,6 +176,8 @@ function getWeather() {
     });
 }
 getWeather();
+
+
 
 //show a div on scrolling
 
@@ -273,3 +276,97 @@ getWeather();
 // };
 
 
+//for about section
+// let text2 = document.querySelectorAll("about__text--letter");
+// // let count=document.querySelector('.countdown')
+// // let header=doucment.querySelector('.header')
+// let strText2 = text2.textContent;
+// text2.textContent = "";
+// console.log(strtext2)
+// let textSplit2 = strText2.split('')
+// console.log(textSplit2);
+
+// for (let i = 0; i < textSplit2.length; i++) {
+//   text2.innerHTML += "<span>" + textSplit2[i] + "</span>";
+// }
+// let char2 = 0;
+// let timer2 = setInterval(onTick2, 50);
+
+// function onTick2() {
+//   const span2 = text2.querySelectorAll("span")[char2];
+//   span2.classList.add("hoverText");
+//   char2++;
+
+//   if (char2 === splitText2.length) {
+   
+//     complete2();
+// // header.style.display='block';
+// // count.style.display:'none'
+//     return;
+//   }
+// //   function onClose(){
+// //     if(char === splitText.length){
+// //         count.style.display='none'
+// //     }
+// //   }
+// //   let close=setInterval(onClose,50)
+// }
+
+// function complete2() {
+//   clearInterval(timer2);
+//   timer2 = n.slidesl;
+// }
+
+//observer interaction
+
+// const observer=new IntersectionObserver((entries)=>{
+//   entries.forEach((entry)=>{
+//     console.log(entry)
+
+//     if(entry.isIntersecting){
+//       entry.target.classList.add('show');
+//     }
+//     else{
+//       entry.target.classList.remove('show');
+//       entry.target.classList.add('hello')
+//     }
+//   })
+// })
+// const hiddenElements=document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));
+
+// let header1=document.querySelector(".header");
+// let y=window.screenY;
+// console.log(y)
+
+
+//for slideshow
+let slideIndex = 1;
+// showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+setTimeout("showSlides(slideIndex)",2600)
+setTimeout("showSlides(n) ",2600)
+setTimeout("function currentSlide(n)",2600)
