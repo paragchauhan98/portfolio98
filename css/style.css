@@ -125,7 +125,7 @@ body {
   color: #36454f; }
 
 .header {
-  background-image: linear-gradient(to bottom, #173ca2 45%, black 135%);
+  background-image: linear-gradient(to bottom, #173ca2 45%, #97ABFF 135%);
   height: 94vh;
   border-radius: 15px;
   overflow: hidden;
