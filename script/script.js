@@ -78,12 +78,12 @@ function showNav(){
   
 }
 setTimeout("showNav()",4200)
-function showAbout(){
+// function showAbout(){
   
-  document.querySelector('.section-about').style.display="block"
+//   document.querySelector('.section-about').style.display="block"
   
-}
-setTimeout("showABout()",200)
+// }
+// setTimeout("showABout()",200)
 
 
 
@@ -178,19 +178,6 @@ getWeather();
 
 //show a div on scrolling
 
-let sectionAbout=document.querySelector('.section-about');
-let screenScroll=function (){
- let y=window.scrollY;
- if(y>=1){
-  sectionAbout.style.display="block";
- // header.style.display="none"
-  console.log('it is scrolling')
-  header.classList.add("scrollIn");
-  sectionAbout.classList.add("moveIn");
- }
-
-}
-window.addEventListener("scroll", screenScroll);
 
 //to add infinite scroll loop in a div
 

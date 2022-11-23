@@ -8,6 +8,7 @@
         margin-top: 0;
     }
     .header{
+        
    border-radius: 0px;
    animation: header__mob 1.5s linear;
    height: 100vh;
@@ -90,6 +91,9 @@
             }
         }
     }
+    }
+    .heading__primary{
+        font-size: 7.5rem;
     }
     
 
