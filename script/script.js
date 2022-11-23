@@ -110,7 +110,11 @@ function printTime() {
     document.documentElement.style.setProperty('--color', "rgb(174, 7, 7)");
   }
  
+<<<<<<< HEAD
   if(hour < 12){
+=======
+  if(hour<12){
+>>>>>>> 5ce85d46d3d06d4e581bbdac3f83922ed6b2fb0e
     navigation.style.backgroundColor="#97ABFF"
     document.documentElement.style.setProperty('--color', "rgb(133, 156, 250)");
   }
