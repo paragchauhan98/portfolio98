@@ -10,14 +10,14 @@
     display:none;
     //z-index: 500;
     
-    // &__textbox{
-    //     color: white;
-    //     text-align: center;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%,-75%)
-    // }
+    &__textbox{
+        color: white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-75%)
+    }
 
  
        
@@ -26,7 +26,7 @@
 &__widgets__clock{
     position: absolute;
     top: .39rem;
-    right: 3rem;
+    right: 0rem;
     display: flex;
     flex-direction: row;
     font-size: 1.4rem;
@@ -103,7 +103,7 @@
             top: 0%;
             padding: .5rem 0rem;
             left: 0;
-       
+            animation: widgets 1.25s linear .5s;
            &.macBar{
             
               background: #f6f6f6; /* Old browsers */
@@ -119,7 +119,7 @@
             }
           .dot {
             display: inline-block;
-            
+            animation: widgets 1.25s linear .5s;
             width: 1.3rem;
             height: 1.3rem;
             background: #f9f9f9;
