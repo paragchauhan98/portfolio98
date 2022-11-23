@@ -1,11 +1,17 @@
 body{
     font-family: dune-rise;
-    padding:  2rem;
-    overflow: hidden;
+    padding:  2rem 2rem;
+  
+    // overflow: hidden;
+    // position: relative;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar { width: 0 !important }
+// }
 }
 .heading{
     &__primary{
-        font-size: 8rem;
+        font-size: 9.4rem;
         
         font-weight: 300;
         padding-bottom: 1rem;

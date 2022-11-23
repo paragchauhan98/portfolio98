@@ -66,10 +66,24 @@ function hideDiv(){
 setTimeout("hideDiv()",3000)
 
 function showDiv(){
-    document.querySelector('.header').style.display='block'
+    document.querySelector('.header').style.display='block';
+    // document.querySelector('.section-about').style.display="block"
+    //document.querySelector('.navigation').style.display="block"
     
 }
 setTimeout("showDiv()",2600)
+function showNav(){
+  
+  document.querySelector('.navigation').style.display="block"
+  
+}
+setTimeout("showNav()",4200)
+function showAbout(){
+  
+  document.querySelector('.section-about').style.display="block"
+  
+}
+setTimeout("showABout()",200)
 
 
 
@@ -105,9 +119,9 @@ function printTime() {
     period = "PM";
     header.style.backgroundImage =
       "linear-gradient( to bottom, black 45%,red 135%)";
-      navigation.style.backgroundColor="rgb(136, 15, 15)"
-      navigation.style.boxShadow="0 1rem 12rem black"
-    document.documentElement.style.setProperty('--color', "rgb(174, 7, 7)");
+     // navigation.style.backgroundColor="rgb(136, 15, 15)"
+      //navigation.style.boxShadow="0 1rem 12rem black"
+   // document.documentElement.style.setProperty('--color', "rgb(174, 7, 7)");
   }
  
 
@@ -115,8 +129,8 @@ function printTime() {
 
   if(hour<12){
 
-    navigation.style.backgroundColor="#97ABFF"
-    document.documentElement.style.setProperty('--color', "rgb(133, 156, 250)");
+   // navigation.style.backgroundColor="#97ABFF"
+   // document.documentElement.style.setProperty('--color', "rgb(133, 156, 250)");
   }
   if (hour < 10) {
     hour = "0" + hour;
@@ -161,3 +175,114 @@ function getWeather() {
     });
 }
 getWeather();
+
+//show a div on scrolling
+
+let sectionAbout=document.querySelector('.section-about');
+let screenScroll=function (){
+ let y=window.scrollY;
+ if(y>=1){
+  sectionAbout.style.display="block";
+ // header.style.display="none"
+  console.log('it is scrolling')
+  header.classList.add("scrollIn");
+  sectionAbout.classList.add("moveIn");
+ }
+
+}
+window.addEventListener("scroll", screenScroll);
+
+//to add infinite scroll loop in a div
+
+
+// var doc = window.document,
+//   context = doc.querySelector('.js-loop'),
+//   clones = context.querySelectorAll('.is-clone'),
+//   disableScroll = false,
+//   scrollHeight = 0,
+//   scrollPos = 0,
+//   clonesHeight = 0,
+//   i = 0;
+
+// function getScrollPos () {
+//   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+// }
+
+// function setScrollPos (pos) {
+//   context.scrollTop = pos;
+// }
+
+// function getClonesHeight () {
+//   clonesHeight = 0;
+
+//   for (i = 0; i < clones.length; i += 1) {
+//     clonesHeight = clonesHeight + clones[i].offsetHeight;
+//   }
+
+//   return clonesHeight;
+// }
+
+// function reCalc () {
+//   scrollPos = getScrollPos();
+//   scrollHeight = context.scrollHeight;
+//   clonesHeight = getClonesHeight();
+
+//   if (scrollPos <= 0) {
+//     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+//   }
+// }
+
+// function scrollUpdate () {
+//   if (!disableScroll) {
+//     scrollPos = getScrollPos();
+
+//     if (clonesHeight + scrollPos >= scrollHeight) {
+//       // Scroll to the top when you’ve reached the bottom
+//       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+//       disableScroll = true;
+//     } else if (scrollPos <= 0) {
+//       // Scroll to the bottom when you reach the top
+//       setScrollPos(scrollHeight - clonesHeight);
+//       disableScroll = true;
+//     }
+//   }
+
+//   if (disableScroll) {
+//     // Disable scroll-jumping for a short time to avoid flickering
+//     window.setTimeout(function () {
+//       disableScroll = false;
+//     }, 40);
+//   }
+// }
+
+// function init () {
+//   reCalc();
+  
+//   context.addEventListener('scroll', function () {
+//     window.requestAnimationFrame(scrollUpdate);
+//   }, false);
+
+//   window.addEventListener('resize', function () {
+//     window.requestAnimationFrame(reCalc);
+//   }, false);
+// }
+
+// if (document.readyState !== 'loading') {
+//   init()
+// } else {
+//   doc.addEventListener('DOMContentLoaded', init, false)
+// }
+
+
+
+
+
+
+
+
+// // Just for this demo: Center the middle block on page load
+// window.onload = function () {
+//   setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
+// };
+
+

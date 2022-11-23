@@ -2,11 +2,13 @@
     background-image: linear-gradient( to bottom, #173ca2 45%,#97ABFF 135%);
     height: 94vh;
     border-radius: 15px;
-    overflow: hidden;
+   // overflow: hidden;
     animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
     z-index:-5;
     width: 100%;
+    position: relative;
     display:none;
+    //z-index: 500;
     
     &__textbox{
         color: white;
@@ -49,7 +51,7 @@
             transition:all .2s linear;
             align-self:center;
           &:hover{
-          transform:rotateZ(360deg)
+          transform:rotateZ(366deg)
           }
         }
     }
@@ -87,3 +89,8 @@
       
     }
     }
+.scrollIn{
+z-index:-2000;
+    animation: scrollIn 1.5s linear;
+   
+}

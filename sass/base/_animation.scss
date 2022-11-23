@@ -68,6 +68,19 @@
   }
 }
 
+//section-about
+@keyframes moveInUp{
+  0%{
+    opacity: 0;
+    transform: translateY(-50rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+//for navigation
+
 //widget animation for mobile
 
 @keyframes widgets_mob{
@@ -95,4 +108,34 @@
     transform: translateX(0) 
   }
 
+}
+//when scrolling occurs
+@keyframes scrollIn{
+  0%{
+    opacity: 1;
+    transform: translateX(0)
+   // display: block;
+  }
+  
+
+  100%{
+    transform: translateX(150rem);
+    opacity: 0;
+  //display: none;
+  }
+}
+@keyframes moveIn{
+  0% {
+    opacity: 0;
+    transform: translateX(-150rem);
+  }
+  50% {
+    opacity: .5;
+    transform:  scale(1.1);
+  }
+ 
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
