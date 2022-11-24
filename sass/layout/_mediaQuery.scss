@@ -8,15 +8,25 @@
         margin-top: 0;
     }
     .header{
+
+            
+        &__images{
+            display: none;
+         }  
+          
+         &__images2{
+            display: none;
+         }  
         
-   border-radius: 0px;
+
    animation: header__mob 1.5s linear;
    height: 100vh;
+   
         &__widgets__clock{
             position: absolute;
             top: .3rem;
-            right:-2rem;
-     
+           left: 6rem;
+     padding-top: .8rem;
             display: flex;
             flex-direction: row;
             
@@ -26,8 +36,7 @@
             animation: widgets_mob 1.25s linear .5s;
           
             
-            
-               
+        
              
         // }
         // &__widgets__weather{
@@ -49,6 +58,21 @@
     }
     .heading__primary{
         font-size: 7.5rem;
+    }
+    .outer{
+        padding: 2rem 0;
+    }
+    .dot{
+        
+        &.red{
+            display: none;
+        }
+        &.green{
+            display: none;
+        }
+        &.amber{
+            display: none;
+        }
     }
     
 
