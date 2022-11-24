@@ -118,11 +118,8 @@ function printTime() {
   if (hour > 12) {
     hour = hour - 12;
     period = "PM";
-    header.style.backgroundImage =
-      "linear-gradient( to bottom, rgba(black,.597) 45%,rgba(red,.597) 135%)";
-     // navigation.style.backgroundColor="rgb(136, 15, 15)"
-      //navigation.style.boxShadow="0 1rem 12rem black"
-   // document.documentElement.style.setProperty('--color', "rgb(174, 7, 7)");
+   
+ 
   }
  
 

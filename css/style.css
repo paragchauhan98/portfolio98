@@ -18,7 +18,7 @@
     transform: translateX(-150rem); }
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1); } }
+    transform: translateX(0); } }
 
 @keyframes headerRotate {
   0% {
@@ -196,7 +196,7 @@ body {
   top: 0%;
   padding: .5rem 0rem;
   left: 0;
-  animation: widgets 1.25s linear .5s; }
+  animation: widgets 1.25s linear; }
   .outer.macBar {
     background: #f6f6f6;
     /* Old browsers */
@@ -298,12 +298,12 @@ body {
     .header__widgets__clock {
       position: absolute;
       top: -.5rem;
-      left: 7.5rem;
+      text-align: center;
       padding-top: .8rem;
       display: flex;
       flex-direction: row;
       font-size: 1.2rem;
-      color: black;
+      color: #A27BB8;
       margin: 0;
       animation: widgets_mob 1.25s linear .5s; } }
 
@@ -324,7 +324,18 @@ body {
 
 @media screen and (max-width: 720px) {
   .nav {
-    width: 60%; } }
+    width: 60%; }
+  __widgets__clock {
+    position: absolute;
+    top: -.5rem;
+    left: 7.5rem;
+    padding-top: .8rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    color: #A27BB8;
+    margin: 0;
+    animation: widgets_mob 1.25s linear .5s; } }
 
 .navigation {
   display: none;
