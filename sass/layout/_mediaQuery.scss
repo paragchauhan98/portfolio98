@@ -7,16 +7,22 @@
         margin-left: 0;
         margin-top: 0;
     }
+    .dot{
+
+        &.red{
+            opacity: 0;
+        }
+        &.green{
+            opacity: 0;
+        }
+        &.amber{
+            opacity: 0;
+        }
+    }
     .header{
 
             
-        &__images{
-            display: none;
-         }  
-          
-         &__images2{
-            display: none;
-         }  
+   
         
 
    animation: header__mob 1.5s linear;
@@ -24,8 +30,8 @@
    
         &__widgets__clock{
             position: absolute;
-            top: .3rem;
-           left: 6rem;
+            top: -.5rem;
+          left: 7.5rem;
      padding-top: .8rem;
             display: flex;
             flex-direction: row;
@@ -59,22 +65,9 @@
     .heading__primary{
         font-size: 7.5rem;
     }
-    .outer{
-        padding: 2rem 0;
-    }
-    .dot{
-        
-        &.red{
-            display: none;
-        }
-        &.green{
-            display: none;
-        }
-        &.amber{
-            display: none;
-        }
-    }
     
+    
+
 
     @media screen and (max-width: 720px){
         .nav{
