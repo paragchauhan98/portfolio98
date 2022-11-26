@@ -401,7 +401,7 @@ let yellow=document.querySelector('.window__winhead__btn--min');
 let macWindow=document.querySelector('.window')
 let folder=document.querySelector('.folder')
 
-function onClose(){
+function onCloser(){
   macWindow.classList.remove('show')
   macWindow.classList.add('hide')
 }

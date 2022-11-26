@@ -1,5 +1,8 @@
 
 @media screen and (max-width: 860px) {
+    .about__container{
+        display: none;
+    }
     body{
         padding: 0 0;
     }
