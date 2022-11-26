@@ -65,6 +65,9 @@ function hideDiv(){
 }
 setTimeout("hideDiv()",3000)
 
+//show and hide div of loader
+
+
 function showDiv(){
     // document.querySelector('.mySlides').style.display='block';
     document.querySelector('.header').style.display='block';
@@ -91,9 +94,11 @@ setTimeout("showNav()",4200)
 //for date time and day
 
 var date = new Date();
-// var todayDate = document.querySelector(".header__widgets__clock--date");
-var todayTime = document.querySelector(".header__widgets__clock--time");
-var todayDay = document.querySelector(".header__widgets__clock--day");
+// var todayDate = document.querySelector(".widgets__clock--date");
+var todayTime = document.querySelector(".widgets__clock--time");
+var todayDay = document.querySelector(".widgets__clock--day");
+var aboutTodayTime = document.querySelectorAll(".about__widgets__clock--time");
+var aboutTodayDay = document.querySelectorAll(".about__widgets__clock--day");
 var nameOfDay = ["sun", "Mon", "tue", "wed", "thu", "fri", "sat"];
 var header = document.querySelector(".header");
 var navigation=document.querySelector('.nav');
@@ -104,6 +109,10 @@ function printDay() {
   var today = date.getDay();
   var day = nameOfDay[today];
   todayDay.innerHTML = day;
+  for (let i = 0; i < aboutTodayDay.length; i++) {
+   aboutTodayDay[i].innerHTML=day
+  }
+
 }
 printDay();
 
@@ -137,14 +146,18 @@ function printTime() {
     minute = "0" + minute;
   }
   todayTime.innerHTML = hour + ":" + minute + " " + period;
+  for (let i = 0; i < aboutTodayDay.length; i++) {
+    aboutTodayTime[i].innerHTML=hour + ":" + minute + " " + period;
+   }
+
 }
 printTime();
 
 //for weather
-var temp = document.querySelector(".header__widgets__clock--temp");
+var temp = document.querySelector(".widgets__clock--temp");
 console.log(temp);
 
-var icons = document.querySelector(".header__widgets__clock--icon");
+var icons = document.querySelector(".widgets__clock--icon");
 console.log(icons);
 //converting kelvin to celsius
 function convert(val) {
@@ -174,7 +187,17 @@ function getWeather() {
 }
 getWeather();
 
+//closing ios notification
 
+let noti=document.querySelectorAll('.about__section__box')
+let num;
+function onClose(num){
+  for(let i=0;i<noti.length;i++){
+    if(i==num){
+      noti[i].style.display="none"
+    }
+  }
+}
 
 //show a div on scrolling
 
@@ -343,10 +366,12 @@ let slideIndex = 1;
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+ 
 }
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  
 }
 
 function showSlides(n) {
@@ -367,3 +392,81 @@ function showSlides(n) {
 setTimeout("showSlides(slideIndex)",2600)
 setTimeout("showSlides(n) ",2600)
 setTimeout("function currentSlide(n)",2600)
+
+
+///folder
+let red=document.querySelector('.window__winhead__btn--close');
+let green=document.querySelector('.window__winhead__btn--max');
+let yellow=document.querySelector('.window__winhead__btn--min');
+let macWindow=document.querySelector('.window')
+let folder=document.querySelector('.folder')
+
+function onClose(){
+  macWindow.classList.remove('show')
+  macWindow.classList.add('hide')
+}
+function onMax(){
+  macWindow.classList.add('max')
+  macWindow.classList.remove('window')
+  macWindow.classList.remove('min')
+}
+function onMin(){
+  
+  macWindow.classList.remove('max')
+  macWindow.classList.add('window')
+  
+}
+
+function openFolder(){
+  macWindow.classList.remove('hide')
+  macWindow.classList.add('show')
+  
+}
+
+////drag the window
+
+dragElement(document.querySelector(".window"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+//sidebar menu

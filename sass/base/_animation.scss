@@ -11,13 +11,37 @@
 @keyframes header {
   0% {
     opacity: 0;
-    transform: translateX(-150rem);
+    filter: blur(5px);
+    transform: translateX(150rem) translateZ(0) ;
+   
   }
+ 50%{
+  opacity: .5;
+  filter: blur(5px);
+  transform:translateX(0) scale(.5)  translateZ(-40rem);
  
+ }
+ 90%{
+  opacity: .5;
+  filter: blur(5px);
+  transform:translateX(0) scale(.9)  translateZ(-40rem);
+ 
+ }
+
+
  
   100% {
     opacity: 1;
-    transform: translateX(0);
+    filter: blur(0);
+    transform: translateX(0)translateZ(0rem);
+  }
+}
+@keyframes mini{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
 @keyframes headerRotate{
@@ -129,3 +153,15 @@
 //    opacity: 1;
 //   }
 // }
+//text message
+@keyframes textMessage{
+
+  0%{
+ 
+    filter: blur(5px);
+  }
+  100%{
+    filter: blur(0);
+  }
+
+}

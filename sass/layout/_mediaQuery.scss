@@ -10,14 +10,31 @@
     .dot{
 
         &.red{
-            opacity: 0;
+           opacity: 0;
         }
         &.green{
-            opacity: 0;
+            display: none;
         }
         &.amber{
-            opacity: 0;
+         display: none;
         }
+    }
+    .widgets__clock{
+        position: absolute;
+      
+      display: inline-block;
+
+      text-align: end;
+
+      width: 80%;
+     
+      display: flex;
+      flex-direction: row;
+        font-size: 1.2rem;
+        color: #A27BB8;
+
+        animation: widgets_mob 1.25s linear .5s;
+
     }
     .header{
 
@@ -28,25 +45,7 @@
    animation: header__mob 1.5s linear;
    height: 100vh;
    
-        &__widgets__clock{
-            position: absolute;
-            top: -.5rem;
-          
-          text-align: center;
-     padding-top: .8rem;
-            display: flex;
-            flex-direction: row;
-            
-            font-size: 1.2rem;
-            color: #A27BB8;
-          margin: 0;
-            animation: widgets_mob 1.25s linear .5s;
-          
-            
-       
-           
-         
-        }
+        
     }
     }
     .heading__primary{
@@ -78,22 +77,11 @@
         .nav{
             width: 60%;
         }
-        &__widgets__clock{
-            position: absolute;
-            top: -.5rem;
-          left: 7.5rem;
-     padding-top: .8rem;
-            display: flex;
-            flex-direction: row;
-            
-            font-size: 1.2rem;
-            color: #A27BB8;
-          margin: 0;
-            animation: widgets_mob 1.25s linear .5s;
-          
-            
-       
-           
-         
-        }
+     
     }
+
+    // sidebar menu
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }

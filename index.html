@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/fontAwesome/css/fontawesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="css/fontAwesome/css/brands.css" rel="stylesheet">
     <link href="css/fontAwesome/css/solid.css" rel="stylesheet">
 </head>
@@ -30,16 +31,38 @@
         </ul>
       </div>
       </nav>
-  
+      <!-- sidebar menu for dropping things -->
+
+      <div id="mySidenav"  class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <ul>
+      <li></li>
+     </ul>
+      </div>
+
+      <!--top bar-->
+      <div class="outer macBar">
+        <div class="dot red"></div>
+        <div class="dot amber"></div>
+        <div class="dot green"></div>
+        <span class="closeNav" onclick="openNav()">&#9776; </span>
+        <div class="widgets__clock">
+          <span class="widgets__clock--city">Har</span>
+        <span class="widgets__clock--day"></span>
+        <span class="widgets__clock--time"></span>
+        <span class="widgets__clock--icon"><i class="fa-regular fa-gear"></i></span>
+        <!-- </div>
+        <div class="widgets__weather"> -->
+          
+          <span class="widgets__clock--temp"></span>
+          <span class="widgets__clock--icon"></span>
+      </div>
+    </div>
 
       <main class="slideshow-container">
  
 <header  class="header mySlides">
-  <div class="outer macBar">
-    <div class="dot red"></div>
-    <div class="dot amber"></div>
-    <div class="dot green"></div>
-</div>
+  
 <!-- <iframe src='https://my.spline.design/3dtextbluecopy-c2822aaa73c649bad48219dae8c7a52c/' frameborder='0' width='100%' height='100%'></iframe> -->
 
   <div class="header__textbox">
@@ -48,17 +71,7 @@
     CREATE EXPERIENCES THAT DELIGHT, INSPIRE AND SHAPE THE
     FUTURE OF THE INTERNET.</h3>
   </div>  
-    <div class="header__widgets__clock">
-      <span class="header__widgets__clock--city">Har</span>
-    <span class="header__widgets__clock--day"></span>
-    <span class="header__widgets__clock--time"></span>
-    <span class="header__widgets__clock--icon"><i class="fa-regular fa-gear"></i></span>
-    <!-- </div>
-    <div class="header__widgets__weather"> -->
-      
-      <span class="header__widgets__clock--temp"></span>
-      <span class="header__widgets__clock--icon"></span>
-  </div>
+  
   <!-- <div class="header__folder">
     <i class="fa-solid fa-folder header__icon--closed"></i>
     <i class="fa-regular fa-folder-open header__icon--open"></i>
@@ -73,7 +86,128 @@
 <div class="section-about mySlides">
   <div class="about">
     
+    <div class="about__container">
+      <div class="about__section">
+        <div class="about__section__box">
+          <div class="background-blur"></div>
+          <div class="about__section__topbar">
+            <div class="background-blur"></div>
+            <div class="about__section__contents">
+            <div class="about__section__left">
+              <span class="about__widgets__clock--day"></span>
+              <span class="about__widgets__clock--time"></span>
+            </div>
+            <div class="about__section__right">
+              <button  class="btn--close" onclick="onClose(0)"> &#215;</button>
+            </div>
+            </div>
+          </div>
+          <div class="about__section__contents about__section__main-content">
+           <strong>
+              Parag Chauhan
+            </strong>
+            <br/><br />
+            Remember! You are the BEST....
+          </div>
+        </div>
+
+
+        <div class="about__section__box">
+          <div class="background-blur"></div>
+          <div class="about__section__topbar">
+            <div class="background-blur"></div>
+            <div class="about__section__contents">
+            <div class="about__section__left">
+              <span class="about__widgets__clock--day"></span>
+              <span class="about__widgets__clock--time"></span>
+            </div>
+            <div class="about__section__right">
+              <button  class="btn--close" onclick="onClose(1)"> &#215;</button>
+            </div>
+            </div>
+          </div>
+          <div class="about__section__contents about__section__main-content">
+           <strong>
+           To  New People
+            </strong>
+            <br/><br />
+        I have just started in the freelacing sphere. I am looking for opportunities.
+          </div>
+        </div>
+
+        
+        <div class="about__section__box">
+          <div class="background-blur"></div>
+          <div class="about__section__topbar">
+            <div class="background-blur"></div>
+            <div class="about__section__contents">
+            <div class="about__section__left">
+              <span class="about__widgets__clock--day"></span>
+              <span class="about__widgets__clock--time"></span>
+            </div>
+            <div class="about__section__right" >
+             <button  class="btn--close" onclick="onClose(2)"> &#215;</button>
+            </div>
+            </div>
+          </div>
+          <div class="about__section__contents about__section__main-content">
+           <strong>
+           Email
+            </strong>
+            <br/><br />
+            Mail me
+            <a href="mailto:iamparag121298@gmail.com">@ParagChauhan</a><br />
+       A long one but it works just fine. Just click.
+          </div>
+        </div>
+        <div class="about__section__box">
+          <div class="background-blur"></div>
+          <div class="about__section__topbar">
+            <div class="background-blur"></div>
+            <div class="about__section__contents">
+            <div class="about__section__left">
+              <span class="about__widgets__clock--day"></span>
+              <span class="about__widgets__clock--time"></span>
+            </div>
+            <div class="about__section__right">
+              <button class="btn--close" onclick="onClose(3)"> &#215;</button>
+            </div>
+            </div>
+          </div>
+          <div class="about__section__contents about__section__main-content">
+           <strong>
+           Hey
+            </strong>
+            <br/><br />
+           Just Remember to have a good day!
+          </div>
+        </div>
+</div>
+     
+</div> 
+<div class="folder" onclick="openFolder()">
+ <div class="feuille">
+  <p class="text">PROFILE
+  </p>
+ </div>
+</div>
+
+<div class="window" >
+ 
+  <div class="window__winhead">
+    <div class="window__winhead__btn">
+      <div class="window__winhead__btn--close" onclick="onClose()"></div>
+      <div class="window__winhead__btn--min" onclick="onMin()"></div>
+      <div class="window__winhead__btn--max" onclick="onMax()"></div>      
+    </div>
+    <div class="window__winhead__title">Profile</div>
   </div>
+  <div class="window__winbody">
+    macOS window
+  </div>
+
+</div>
+</div>
 </div>
 </div>
 </main>

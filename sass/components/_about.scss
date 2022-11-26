@@ -1,13 +1,125 @@
 .about{
-    background-color: red;
-    height: 100vh;
-    background-image: url('https://my.spline.design/3dtextbluecopy-c2822aaa73c649bad48219dae8c7a52c/');
+position: relative;
+background-size: cover;
+height: 100vh;
+    background-image:linear-gradient( to bottom, rgba(23, 60, 162, 0.597) 45%,rgba(151, 172, 255, 0.597) 135%), url('../img/aboutbg4.jpg'); 
+    animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
 }
 
 // .slideshow-container {
-//     max-width: 100%;
-//     position: relative;
+// background-color: black;
+// filter: blur(10px);
     
 //   }
 //   .mySlides 
 //   {display: none}
+
+///ios message
+
+  
+.about__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+ 
+    
+  }
+  
+  .about__section {
+    /** border: dashed 2px pink; **/
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 35rem;
+    min-height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    
+ 
+  
+ &__box {
+    position: relative;
+    min-height: 8rem;
+    max-height: 18rem;
+    border-radius: 1rem;
+    margin-bottom: .8rem;
+    overflow: hidden;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.06);
+    
+    &:nth-child(1){
+        animation: textMessage .5s linear 1.25s;
+    }
+    &:nth-child(2){
+        animation: textMessage .5s linear 1.35s;
+    }
+    &:nth-child(3){
+        animation: textMessage .5s linear 1.45s;
+    }
+    &:nth-child(4){
+        animation: textMessage .5s linear 1.50s;
+    }
+   
+  }
+  
+  &__topbar {
+    height: 2.5rem;
+    position: relative;
+    color: black;
+  }
+  
+  .background-blur {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+  }
+  &__contents {
+    z-index: 100;
+    position: inherit;
+    font-size: 1rem;
+  }
+  
+  &__left {
+    float: left;
+    text-align: left;
+    width: content-max;
+    margin-top: 1rem;
+    padding-left: 1rem;
+
+   
+  }
+  
+  &__right {
+    float: right;
+    text-align: right;
+
+
+padding-right: 2.5rem;
+.btn--close{
+  margin-top: 1.75rem;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+    &:hover{
+        color: red;
+          transform: scale(1.1);
+      
+      }
+}
+
+
+  }
+
+  
+ 
+  
+  &__main-content {
+    padding: 2rem 2rem;
+    height: content-max;
+  }
+  
+  
+}
