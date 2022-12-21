@@ -1,14 +1,11 @@
 .about{
- position: relative;
-background-size: cover;
-
-height: 100vh;
-    background-image:linear-gradient( to bottom, rgba(23, 60, 162, 0.597) 45%,rgba(151, 172, 255, 0.597) 135%); 
-    animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
-}
-.slideshow-container{
+position: relative;
+background-size: 100% 100vh;
+background-image:linear-gradient( to bottom, rgba(23, 60, 162, 0.597) 45%,rgba(151, 172, 255, 0.597) 135%); 
+animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
   width: 100%;
 }
+
 
 // .slideshow-container {
 // background-color: black;
