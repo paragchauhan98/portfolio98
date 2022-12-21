@@ -10,26 +10,16 @@
         margin-left: 0;
         margin-top: 0;
     }
-    .dot{
-
-        &.red{
-           opacity: 0;
-        }
-        &.green{
-            display: none;
-        }
-        &.amber{
-         display: none;
-        }
-    }
+  
     .widgets__clock{
         position: absolute;
-      
+ 
+      left: 1rem;
       display: inline-block;
 
       text-align: end;
 
-      width: 80%;
+      width: 100%;
      
       display: flex;
       flex-direction: row;

@@ -100,7 +100,7 @@ var todayDay = document.querySelector(".widgets__clock--day");
 var aboutTodayTime = document.querySelectorAll(".about__widgets__clock--time");
 var aboutTodayDay = document.querySelectorAll(".about__widgets__clock--day");
 var nameOfDay = ["sun", "Mon", "tue", "wed", "thu", "fri", "sat"];
-var header = document.querySelector(".header");
+var beader = document.querySelector(".header");
 var navigation=document.querySelector('.nav');
 
 
@@ -127,7 +127,8 @@ function printTime() {
   if (hour > 12) {
     hour = hour - 12;
     period = "PM";
-   
+    beader.style.backgroundImage="linear-gradient( to bottom, rgb(0, 0, 0) 45%,rgb(138, 9, 9) 135%)"
+   // document.getElementsByClassName("header").style.backgroundImage ="linear-gradient( to bottom, rgb(black) 45%,rgb(red) 135%)"
  
   }
  
@@ -399,21 +400,53 @@ let red=document.querySelector('.window__winhead__btn--close');
 let green=document.querySelector('.window__winhead__btn--max');
 let yellow=document.querySelector('.window__winhead__btn--min');
 let macWindow=document.querySelector('.window')
+let macWindow2=document.querySelector('.window2')
+let macWindow3=document.querySelector('.window3')
 let folder=document.querySelector('.folder')
 
 function onCloser(){
   macWindow.classList.remove('show')
   macWindow.classList.add('hide')
 }
+function onCloser2(){
+  macWindow2.classList.remove('show')
+  macWindow2.classList.add('hide')
+}
+function onCloser3(){
+  macWindow3.classList.remove('show')
+  macWindow3.classList.add('hide')
+}
 function onMax(){
   macWindow.classList.add('max')
   macWindow.classList.remove('window')
   macWindow.classList.remove('min')
 }
+function onMax2(){
+  macWindow2.classList.add('max')
+  macWindow2.classList.remove('window2')
+  macWindow2.classList.remove('min')
+}
+function onMax3(){
+  macWindow3.classList.add('max')
+  macWindow3.classList.remove('window3')
+  macWindow3.classList.remove('min')
+}
 function onMin(){
   
   macWindow.classList.remove('max')
   macWindow.classList.add('window')
+  
+}
+function onMin2(){
+  
+  macWindow2.classList.remove('max')
+  macWindow2.classList.add('window2')
+  
+}
+function onMin3(){
+  
+  macWindow3.classList.remove('max')
+  macWindow3.classList.add('window3')
   
 }
 
@@ -422,10 +455,22 @@ function openFolder(){
   macWindow.classList.add('show')
   
 }
+function openFolder2(){
+  macWindow2.classList.remove('hide')
+  macWindow2.classList.add('show')
+  
+}
+function openFolder3(){
+  macWindow3.classList.remove('hide')
+  macWindow3.classList.add('show')
+  
+}
 
 ////drag the window
 
 dragElement(document.querySelector(".window"));
+dragElement(document.querySelector(".window2"));
+dragElement(document.querySelector(".window3"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

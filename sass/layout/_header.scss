@@ -1,6 +1,6 @@
 .header{
   //  background-image: linear-gradient( to bottom, #173ca2 45%,#97ABFF 135%);
-  background-image: linear-gradient( to bottom, rgba(23, 60, 162, 0.597) 45%,rgba(151, 172, 255, 0.597) 135%),url('../../img/backw.jpg');
+  background-image: linear-gradient( to bottom, rgba(23, 60, 162, 0.597) 45%,rgba(151, 172, 255, 0.597) 135%);
   background-size: 100% 100vh;
   background-repeat: no-repeat;
   
@@ -10,7 +10,7 @@
     animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
   //  z-index:-5;
     width: 100%;
- 
+
     display:none;
     //z-index: 500;
     
