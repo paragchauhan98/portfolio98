@@ -713,6 +713,8 @@ body {
 @media screen and (max-width: 860px) {
   .about__container {
     display: none; }
+  .whole-folder {
+    width: 100%; }
   body {
     padding: 0 0; }
   .countdown {
