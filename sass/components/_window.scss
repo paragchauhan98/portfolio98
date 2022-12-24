@@ -1,13 +1,12 @@
 .window{
-   width: 50%;
-   height: 80%;
+  
     display:flex;
     flex-direction:column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius:5px;
     position: absolute;
     top:20%;
-    left: 20%;
+    left: 5%;
     z-index: 1000;
     display: none;
     
@@ -64,26 +63,90 @@
 }
   &__winbody{
     height:100%;
+    width: 100%;
     background:rgb(231,231,231);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    line-height:300px;
-    text-align:center;
+    
+    display: flex;
+    &__title {
+      
+      width: 100%;
+      
+    align-self: center;
+      transform: translateY(-50px);
+      color: black;
+      margin: 0 auto;
+      overflow: hidden;
+      padding-bottom: 10px;
+      margin-top: -5%;
+      margin-left: 10%;
+      
+    span {
+     
+    
+        display: inline-block; 
+         color: yellow;
+        font-size: 7rem;
+      //  background-color: orange;
+       // color: #efefef;
+        width: 100%;
+        text-transform: uppercase;
+        transform: translateX(-100%);
+        animation: byBottom 1s ease both;
+        font-weight: 600;
+        letter-spacing: 0.25vw;
+      } 
+       span:last-child {
+        font-size: 2rem;
+        padding:3rem 0;
+        margin-top: -3rem;
+      
+     
+       // background-color: red;
+        animation: byBottom 1s 0.25s ease both;
+      } 
+       span a {
+        position: relative;
+        display: inline-block;
+        margin-left: 0.5rem;
+        text-decoration: none;
+        //color: #f7ca18;
+        color: red;
+      }
+       span a::after {
+        content: "";
+        height: 2px;
+        background-color: #f7ca18;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        animation: linkAfter 0.5s 1s ease both;
+      }
+     span h3{
+        color: black;
+      }
+    } 
+    //  h1{
+    //  // color: light gray;
+    //  color: black;
+    // }
+  
+    
+    
   }
-}
-
-
-
+} 
    .window2{
-    width: 50%;
-   height: 80%;
+    width: 90%;
+ height: 45rem;
     display:flex;
     flex-direction:column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius:5px;
     position: absolute;
-    top:25%;
-    left: 20%;
+    top:29%;
+    left: 5%;
     z-index: 1000;
     display: none;
     
@@ -149,15 +212,15 @@
 }
 
 .window3{
-  width: 50%;
- height: 80%;
+  width: 90%;
+ height: 45rem;
   display:flex;
   flex-direction:column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-radius:5px;
   position: absolute;
   top:35%;
-  left: 20%;
+  left: 5%;
   z-index: 1000;
   display: none;
   
@@ -223,26 +286,62 @@
 }
 
 .max{
- width: 90%;
- height: 45rem;
- display: block;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-   border-radius:5px;
-   position: absolute;
-   top:15%;
-   left: 5%;
+  display:block;
+  width:90%;
+height:50rem;
+  position:absolute;
+  top:15%;
+  left:5%;
   
    z-index: 1000;
-
 }
+.openFolder{
+  display:block;
+  width:90%;
+height:80vh;
+  position:absolute;
+  top:15%;
+  z-index: 1000;
+  left:5%;
+}
+.min{
+  width: 45%;
+  height: 30rem;
+  position: absolute;
+  display: block;
+  top:25%;
+    left: 20%;
+  z-index: 1000;
+  // animation: window12 .5s ease-in;
+}
+.min2{
+  width: 45%;
+  height: 30rem;
+    position: absolute;
+    display: block;
+    top:30%;
+    left: 20%;
+    z-index: 1000;
+    //animation: window12 .5s ease-in;
+  }
+  .min3{
+    width: 45%;
+    height: 30rem;
+      position: absolute;
+      display: block;
+      top:35%;
+    left: 20%;
+      z-index: 1000;
+
+     
+    }
 
 .hide{
   display: none;
 }
-.show{
-  display: block;
-}
+// .show{
+//   display: block;
+// }
 #mainWindow.custom-state-active {
  background: #eee; }
 
-   

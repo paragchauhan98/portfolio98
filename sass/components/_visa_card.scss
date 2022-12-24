@@ -1,0 +1,413 @@
+// // /* ***** Colors - Start ***** */
+// // $black: #111;
+// // $light-black: #242224;
+// // $blue: #1b2f69;
+// // $light-blue: #27408f;
+// // $white: #fff;
+// // $light-white: #dae4ee;
+// // /* ***** Colors - End ***** */
+
+// // /* ***** Dimensions - Start ***** */
+// // $card-stack-width: 200px;
+// // $card-stack-height: 100px;
+// // $card-width: calc(#{$card-stack-width} - 30px);
+// // $card-height: 200px;
+// // /* ***** Dimensions - End ***** */
+
+// // /* ***** Global Styles - Start ***** */
+
+
+// // %center {
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: center;
+// // }
+// // %extra-cards {
+// //   position: absolute;
+// //   width: $card-width;
+// //   height: $card-height;
+// //   background-color: $light-black;
+// //   border-radius: 10px;
+// // }
+// // %card {
+// //   width: $card-width;
+// //   height: $card-height;
+// //   border-radius: 10px;
+// // }
+// // /* ***** Global Styles - End ***** */
+
+// // /* ***** Specific Styles - Start ***** */
+// // .hcontainer {
+// //   @extend %center;
+// //  margin-left: 40%;
+// //  margin-top: 20%;
+// // }
+// // .card-1 {
+// //   @extend %extra-cards;
+// //   top: 8rem;
+// //   left: 4rem;
+ 
+// // }
+// // .card-2 {
+// //   @extend %extra-cards;
+// //   top: calc(#{$card-width} - 2rem);
+// //   left: 12rem;
+ 
+// // }
+// // .card-3 {
+// //   @extend %extra-cards;
+// //   top: calc(#{$card-width} * 2 - 5rem);
+// //   left: 24rem;
+  
+// // }
+// // .card-4 {
+// //   @extend %extra-cards;
+// //   bottom: 1rem;
+// //   right:4rem;
+
+// // }
+// // .card-5 {
+// //   @extend %extra-cards;
+// //   bottom: calc(#{$card-width} - 2rem);
+// //   right: 15rem;
+
+// // }
+// // .card-6 {
+// //   @extend %extra-cards;
+// //   bottom: calc(#{$card-width} * 2 - 11rem);
+// //   right: 25rem;
+
+// //   overflow: hidden;
+// // }
+// // .card-stack {
+// //   display: flex;
+// //   justify-content: center;
+// //   width:250px;
+// //   height:150px;
+// //   background-color: $light-black;
+// //   border-radius: 20px;
+
+// //   .balance {
+// //     position: absolute;
+// //     width: 100%;
+// //     margin-top: 230px;
+// //     margin-left: 40px;
+// //     font-size: 11px;
+// //     color: red;
+// //     span {
+// //       font-size: 18px;
+// //     }
+// //   }
+// // }
+// // .swiper-container {
+// //   display: flex;
+// //   width: 250px;
+// //   height: 150px;
+// //   justify-content: center;
+// //   align-self: flex-end;
+// //   margin-bottom: 15px;
+// // }
+// // .slide {
+// //   position: absolute;
+   
+// //   width: 250px;
+// //   height: 150px;
+// //   font-size: 18px;
+// //   padding: 20px;
+// //   background: #fff;
+// //   cursor: pointer;
+// //   outline: none;
+// //   .bank-name {
+// //     display: flex;
+// //     justify-content: space-between;
+// //     align-items: flex-start;
+// //     font-size: 12px;
+// //     span {
+// //       font-size: 10px;
+// //       color: grey;
+// //     }
+// //     img {
+// //       margin: -15px -10px 0 0;
+// //     }
+// //   }
+// //   img {
+// //     margin: 10px 0;
+// //   }
+// //   .card-number {
+// //     font-size: 15px;
+// //   }
+// //   .personal-info {
+// //     display: flex;
+// //     justify-content: space-between;
+// //     margin-top: 10px;
+// //     font-size: 12px;
+// //   }
+// //   &.slide-3 {
+// //     width: calc(250 - 30px);
+// //     margin-top: -30px;
+// //     background: rgb(72, 111, 233);
+// //     z-index: 1;
+// //     color: $white;
+// //     span {
+// //       color: $white;
+// //       opacity: 0.5;
+// //     }
+// //   }
+// //   &.slide-2 {
+// //     width: calc(250 - 15px);
+// //     background-color: $white;
+// //     z-index: 2;
+// //   }
+// //   &.slide-1 {
+// //     margin-top: -250px;
+// //     z-index: 3;
+// //     color: #fff;
+// //     background-color: $black;
+// //   }
+// // }
+// // /* ***** Specific Styles - End ***** */
+
+// // /* ***** Media Queries - Start ***** */
+// // @media screen and (max-width: 650px) {
+// //   .card-1,
+// //   .card-2,
+// //   .card-3,
+// //   .card-4,
+// //   .card-5,
+// //   .card-6 {
+// //     display: none;
+// //   }
+// // }
+// // /* ***** Media Queries - End ***** */
+
+
+
+// /* ***** Colors - Start ***** */
+// $black: #111;
+// $light-black: #242224;
+// $blue: #1b2f69;
+// $light-blue: #27408f;
+// $white: #fff;
+// $light-white: #dae4ee;
+// /* ***** Colors - End ***** */
+
+// /* ***** Dimensions - Start ***** */
+// // $card-stack-width: 300px;
+// // $card-stack-height: 150px;
+// // $card-width: calc(#{$card-stack-width} - 30px);
+// // $card-height: 200px;
+// /* ***** Dimensions - End ***** */
+
+// /* ***** Global Styles - Start ***** */
+// // * {
+// //   margin: 0;
+// //   padding: 0;
+// //   box-sizing: border-box;
+// //   font-family: "Poppins", sans-serif;
+// // }
+// // body {
+// //   background-color: $black;
+// //   overflow: hidden;
+// // }
+// // %center {
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: center;
+// // }
+// // %extra-cards {
+// //   position: absolute;
+// //   width: $card-width;
+// //   height: $card-height;
+// //   background-color: $light-black;
+// //   border-radius: 10px;
+// // }
+// // %card {
+// //   width: $card-width;
+// //   height: $card-height;
+// //   border-radius: 10px;
+// // }
+// /* ***** Global Styles - End ***** */
+
+// /* ***** Specific Styles - Start ***** */
+
+// .hcontainer {
+//   // @extend %center;
+//   border-bottom-left-radius: 5px;
+//     border-bottom-right-radius: 5px;
+// height:80vh;
+// position: absolute;
+// width: 37rem;
+//   display: flex;
+//   align-self: center;
+//   background:rgb(231,231,231);
+//   display: none;
+// &__winhead{
+//   height:35px;
+//   background:rgb(244,244,244);
+//   border-bottom:0.5px solid rgba(162,163,164,.4);
+//   border-top-left-radius: 5px;
+//   border-top-right-radius: 5px;
+//   display:flex;
+//   width: 100%;
+//   align-items:center;
+//   position: relative;
+
+// &__btn{
+//   display:flex;
+//   align-items:center;
+//   z-index:9;
+
+  
+// &--close{
+//   width:12px;
+//   height:12px;
+//   margin-left:6px;
+ 
+//   border-radius:50%;
+//   background:rgb(231,69,70);
+//   border:0.5px solid rgb(208,67,67);
+// }
+// &--min{
+//    width:12px;
+//   height:12px;
+//   margin-left:6px;
+ 
+//   border-radius:50%;
+//   background:rgb(246,180,39);
+//   border:0.5px solid rgb(212,154,58);
+// }
+// &--max{
+//   width:12px;
+//   height:12px;
+//   margin-left:6px;
+ 
+//   border-radius:50%;
+//   border:0.5px solid rgb(104, 248, 64);
+//   background:rgb(86,202,53);
+// }
+// }
+// &__title{
+//   position: absolute;
+//   width:100%;
+//   text-align:center;
+// }
+// }
+
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%,-50%);
+
+//  // margin-top: -3%;
+ 
+// }
+
+// // .card-stack {
+// //   display: flex;
+// //   justify-content: center;
+// //   width: 250px;
+// //   height: 150px;
+// //   background-color: $light-black;
+// //   border-radius: 20px;
+  
+ 
+// // }
+//  .swiper-container {
+//   position: absolute;
+//   // display: flex;
+//   width: 250px;
+//   height: 150px;
+//   // justify-content: center;
+//   // align-self: flex-end;
+//   // margin-bottom: 15px;
+//   top: 75%;
+//   left: 42%;
+//   transform: translate(-50%,-50%);
+ 
+// }
+// .slide {
+//   position: absolute;
+//   width: 250px;
+//   height: 150px;
+//   font-size: 18px;
+  
+//   padding: 20px;
+//   background: #fff;
+//   cursor: pointer;
+//   outline: none;
+//   .bank-name {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-start;
+//     font-size: 12px;
+//     span {
+//       font-size: 10px;
+//       color: grey;
+//     }
+  
+//   }
+//   .angular {
+//     margin: 10px 0;
+//     display: block;
+//     font-size: 8rem;
+//     text-align: center;
+//   }
+//   .card-number {
+//     font-size: 15px;
+//     a{
+//       text-decoration: none;
+//       color: plum;
+      
+//     }
+    
+//   }
+//   .personal-info {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 10px;
+//     font-size: 12px;
+//   }
+//   &.slide-4 {
+//     width: 250px;
+//     height: 150px;
+//     margin-top: -30px;
+//     background: rgb(72, 111, 233);
+//     z-index: 1;
+//     color: $white;
+//     span {
+//       color: $white;
+//       opacity: 0.5;
+//     }
+//   }
+//   &.slide-2 {
+//     width: 250px;
+//     height: 150px;
+//     background-color: $white;
+//     z-index: 2;
+//   }
+//   &.slide-3 {
+//     width: 250px;
+//     height: 150px;
+//     background-color: $white;
+//     z-index: 3;
+//   }
+//   &.slide-1 {
+//     margin-top: -300px;
+//     z-index: 4;
+//     color: #fff;
+//     background-color: $black;
+//   }
+// }
+// /* ***** Specific Styles - End ***** */
+
+// /* ***** Media Queries - Start ***** */
+// @media screen and (max-width: 650px) {
+//   .card-1,
+//   .card-2,
+//   .card-3,
+//   .card-4,
+//   .card-5,
+//   .card-6 {
+//     display: none;
+//   }
+// }
+// /* ***** Media Queries - End ***** */
