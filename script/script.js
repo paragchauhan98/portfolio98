@@ -561,12 +561,19 @@ function openFolder4(){
 }
 //////image preview
 let imgPrev1=document.querySelector('.popup')
+let imgPrev2=document.querySelector('.popup2')
 function openPrev(){
   imgPrev1.style.display="block"
+}
+function openPrev2(){
+  imgPrev2.style.display="block"
 }
 function onImgClose(){
 imgPrev1.style.display="none"
 }
+function onImgClose2(){
+  imgPrev2.style.display="none"
+  }
 ////drag the window
 
 dragElement(document.querySelector(".window"));
