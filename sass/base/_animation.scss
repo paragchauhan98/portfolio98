@@ -194,3 +194,11 @@ opacity: 1;
     width: 30px;
   }
 }
+@keyframes imageblowing {
+  0% {
+  transform: rotateX(5deg);
+  }
+  100% {
+    transform: rotateX(-5deg);
+  }
+}

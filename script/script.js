@@ -403,6 +403,7 @@ let yellow=document.querySelector('.window__winhead__btn--min');
 let macWindow=document.querySelector('.window')
 let macWindow2=document.querySelector('.window2')
 let macWindow3=document.querySelector('.window3')
+let macWindow4=document.querySelector('.window4')
 let folder=document.querySelector('.folder')
 let invisible=document.querySelector('.invisible')
 
@@ -422,6 +423,12 @@ function onCloser3(){
   macWindow3.classList.add('hide')
   macWindow3.classList.remove('min3')
   macWindow3.classList.remove('openFolder')
+  // macWindow3.style.display="none"
+}
+function onCloser4(){
+  macWindow4.classList.add('hide')
+  macWindow4.classList.remove('min')
+  macWindow4.classList.remove('openFolder')
   // macWindow3.style.display="none"
 }
 function onMax(){
@@ -455,7 +462,10 @@ function onMax3(){
   // macWindow3.style.top="25%"
   // macWindow3.style.left="5%"
 }
-
+function onMax4(){
+  macWindow4.classList.add('max')
+  macWindow4.classList.remove('min')
+}
 
 function onMin(){
  
@@ -495,6 +505,10 @@ function onMin3(){
   // macWindow3.style.top="125%"
   // macWindow3.style.left="60%"
   //macWindow3.classList.add('hide')
+}
+function onMin4(){
+  macWindow3.classList.remove('openFolder')
+  macWindow3.classList.add('min')
 }
 
 function openFolder(){
@@ -538,7 +552,21 @@ function openFolder3(){
   // macWindow3.style.left="5%"
   macWindow3.classList.remove('min3')
 }
-
+function openFolder4(){
+  macWindow4.classList.add('openFolder')
+  macWindow.classList.add('hide')
+  macWindow4.classList.remove('hide')
+ 
+  macWindow4.classList.remove('min')
+}
+//////image preview
+let imgPrev1=document.querySelector('.popup')
+function openPrev(){
+  imgPrev1.style.display="block"
+}
+function onImgClose(){
+imgPrev1.style.display="none"
+}
 ////drag the window
 
 dragElement(document.querySelector(".window"));
