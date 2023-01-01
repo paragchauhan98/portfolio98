@@ -823,6 +823,20 @@ body {
     background-color: transparent;
     color: red; }
 
+a {
+  color: black; }
+
+.picture {
+  width: 120px;
+  position: relative; }
+
+.name2 {
+  position: absolute;
+  z-index: 1000000;
+  top: 14.5rem;
+  left: 19.4rem;
+  text-align: center; }
+
 .sidenav {
   height: 100%;
   width: 0;
