@@ -13,23 +13,36 @@
         margin-left: 0;
         margin-top: 0;
     }
-  
+    .header__line-1,.header__line-2,.header__line-3,.header__line-4,.header__line-5{
+        display: none;
+    }
+  .logo{
+    display: none;
+  }
     .widgets__clock{
         position: absolute;
- 
-      left: 1rem;
-      display: inline-block;
+        z-index: 20000;
+        top: -90%;
+        left: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.4rem;
+        color: white;
 
-      text-align: end;
+       
 
-      width: 90%;
-     
-      display: flex;
-      flex-direction: row;
-        font-size: 1.2rem;
-        color: #A27BB8;
+    }
+    .widgets__weather{
+        position: absolute;
+        z-index: 20000;
+        top: -90%;
+        right: 1rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.4rem;
+        color: white;
 
-        animation: widgets_mob 1.25s linear .5s;
+      
 
     }
     .header{
@@ -38,7 +51,7 @@
    
         
 
-   animation: header__mob 1.5s linear;
+   animation: header 1.25s linear,headerRotate 2s linear 4s infinite;
    height: 100vh;
    
         

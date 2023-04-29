@@ -10,30 +10,15 @@
 }
 @keyframes header {
   0% {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(150rem) translateZ(0) ;
+   transform: scale(0.4);
    
   }
- 50%{
-  opacity: .5;
-  filter: blur(5px);
-  transform:translateX(0) scale(.5)  translateZ(-40rem);
- 
- }
- 90%{
-  opacity: .5;
-  filter: blur(5px);
-  transform:translateX(0) scale(.9)  translateZ(-40rem);
- 
- }
+
 
 
  
   100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0)translateZ(0rem);
+   transform: scale(1);
   }
 }
 @keyframes mini{
@@ -52,16 +37,7 @@
         transform:rotateX(-2deg)
     }
 }
-@keyframes timer{
-    0%{
-        opacity: 1;
-    }
-  
-    100%{
-        opacity: 0;
 
-    }
-}
 
 @keyframes widgets{
     0%{
@@ -200,5 +176,27 @@ opacity: 1;
   }
   100% {
     transform: rotateX(-5deg);
+  }
+}
+
+@keyframes textBouncing {
+  0% {
+  transform: translateY(-10rem);
+  opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes iconRotate {
+  0% {
+  transform: scale(1.1) rotate(360deg);
+  
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
   }
 }

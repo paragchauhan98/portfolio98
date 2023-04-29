@@ -36,30 +36,25 @@
       </nav>
       <!-- sidebar menu for dropping things -->
 
-      <div id="mySidenav"  class="sidenav">
+      <!-- <div id="mySidenav"  class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
      <ul>
       <li></li>
      </ul>
-      </div>
+      </div> -->
 
       <!--top bar-->
-      <div class="outer macBar">
-        <div class="dot red"></div>
-        <div class="dot amber"></div>
-        <div class="dot green"></div>
-        <span class="closeNav" onclick="openNav()">&#9776; </span>
-        <div class="widgets__clock">
-          <span class="widgets__clock--city">Har</span>
-        <span class="widgets__clock--day"></span>
-        <span class="widgets__clock--time"></span>
-        <span class="widgets__clock--icon"><i class="fa-regular fa-gear"></i></span>
-        <!-- </div>
-        <div class="widgets__weather"> -->
-          
-          <span class="widgets__clock--temp"></span>
-          <span class="widgets__clock--icon"></span>
-      </div>
+      <div class="widgets__clock">
+        <span class="widgets__clock--city">Har</span>
+      <span class="widgets__clock--day"></span>
+      <span class="widgets__clock--time"></span>
+      
+     </div>
+      <div class="widgets__weather"> 
+        
+        <span class="widgets__weather--temp"></span>
+        <span class="widgets__weather--icon"></span>
+        <span class="widgets__weather--icon1"><i class="fa-regular fa-gear"></i></span>
     </div>
 
       <main class="slideshow-container">
@@ -73,7 +68,8 @@
   <h3 class="heading__tertiary">WORKING AT THE INTERSECTION OF WEB AND DESIGN TO
     CREATE EXPERIENCES THAT DELIGHT, INSPIRE AND SHAPE THE
     FUTURE OF THE INTERNET.</h3>
-  </div>  
+  </div>
+
   
   <!-- <div class="header__folder">
     <i class="fa-solid fa-folder header__icon--closed"></i>
@@ -131,10 +127,10 @@
           </div>
           <div class="about__section__contents about__section__main-content">
            <strong>
-           To  New People
+         To People
             </strong>
             <br/><br />
-        I have just started in the freelacing sphere. I am looking for opportunities.
+        Next System Update will drop soon!
           </div>
         </div>
 
@@ -191,7 +187,7 @@
 <div class="whole-folder">
 <div class="folder" onclick="openFolder()">
  <div class="feuille">
-  <p class="text">PROFILE
+  <p class="text">Profile
   </p>
  </div>
 </div>
@@ -209,14 +205,14 @@
   <div class="window__winbody">
     
 <a href="#" onclick="openFolder4()" >
-  <div class="item folder1" data-count="3">
+  <div class="item folder1" data-count="2">
     <span class="name">Images</span>
   </div>
 </a>
-<a href="#" onclick="openFolder4()" >
+<a href="#" onclick="openDocx()" >
   <div >
     <img class="picture" src="./img/word1.png" width="120px">
-    <p class="name2">Profile.docx</p>
+    <p class="name2">Intros.docx</p>
   </div>
 </a>
     <!-- <span>About Me</span><span>Graphic Designer and<a target="_blanck" href="salfia.com">Web Developer</a>
@@ -271,9 +267,20 @@
      </div>
      <div class="window2__winhead__title">Technology</div>
    </div>
-   <div class="window__winbody">
-  
-   
+   <div class="window2__winbody">
+    <div class="window2__winbody__container">
+
+  <img src="./img/angular.svg" class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;"/>
+
+  <img src="./img/react.png" class="window2__winbody__container--images"  style="margin-left: 2rem; margin-top: 2rem;"/>
+  <img src="./img/html.png" class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;"/>
+  <img src="./img/css (2).png"class="window2__winbody__container--images"  style="margin-left: 2rem; margin-top: 2rem;"/>
+  <img src="./img/js (2).png"class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;" />
+  <img src="./img/bootstrap.png" class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;"/>
+  <img src="./img/node.png" class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;"/>
+  <img src="./img/express.png"class="window2__winbody__container--images" style="margin-left: 2rem; margin-top: 2rem;" />
+  <img src="./img/mongo.png"class="window2__winbody__container--images"  style="margin-left: 2rem; margin-top: 2rem;"/>
+</div>
    </div>
  
  </div>
@@ -285,13 +292,40 @@
       <div class="window4__winhead__btn--min" onclick="onMin4()"></div>
       <div class="window4__winhead__btn--max" onclick="onMax4()"></div>      
     </div>
-    <div class="window4__winhead__title">Technology</div>
+    <div class="window4__winhead__title">Images</div>
   </div>
   <div class="window__winbody">
  
     <div class="picture"><img class="chat-image" src="./img/personal/IMG_20190719_162038.jpg" onclick="openPrev()" /><p class="name1">Parag with Specs</p></div>
     <div class="picture">    <img class="chat-image" src="./img/personal/IMG_20190929_195402.jpg" onclick="openPrev2()" /><p class="name1">Parag without Specs</p></div>
    
+  </div>
+
+</div>
+<div class="window5" >
+  
+  <div class="window5__winhead">
+    <div class="window5__winhead__btn">
+      <div class="window5__winhead__btn--close" onclick="onCloser5()"></div>
+      <!-- <div class="window5__winhead__btn--min" onclick="onMin5()"></div> -->
+      <!-- <div class="window5__winhead__btn--max" onclick="onMax5()"></div>       -->
+    </div>
+    <div class="window5__winhead__title">Intros.docx</div>
+  </div>
+  <div class="window5__winbody">
+ 
+  <div class="window5__winbody--intro">
+<p>
+  A beginner in the infinite land of creativity breaking ceilings.<br><br>
+You have seen my projects (I hope so) if not then check them out.<br><br>
+Here, you get to know me. I am a Front-end developer. You knew that. I guess... But I am also a reader. A person who likes to leave this reality behind sometimes and find something different to look upon.
+I like to play table tennis. Picked this game up in college and never looked back. What else.... Nothing more, I believe not very interesting. Well, sad.
+<br><br>
+For the boring part, I am currently working as an angular developer for Cognizant. I am looking to branch out in the world of freelancing as I believe I would find this more free of constraints. Also it may help me find my own interest while I work for you so win win I guess.
+You can check out the technologies I work with here. And that's it. I think.<br><br> Bye.
+
+</p>
+  </div>
   </div>
 
 </div>
@@ -305,7 +339,7 @@
 </div>
  <div class="folder" onclick="openFolder3()">
   <div class="feuille">
-   <p class="text">PROFILE
+   <p class="text">Update
    </p>
   </div>
  </div>
@@ -318,10 +352,15 @@
        <div class="window3__winhead__btn--min" onclick="onMin3()"></div>
        <div class="window3__winhead__btn--max" onclick="onMax3()"></div>      
      </div>
-     <div class="window3__winhead__title">Profile</div>
+     <div class="window3__winhead__title">Update</div>
    </div>
    <div class="window3__winbody">
- ajiljktrhjfhgsalfj;garl;gjhrio
+ What can you expect in next System Update?
+ <ul>
+  <li>Back button for navigation between folders</li>
+  <li>Better UI for Technology folder</li>
+  <li>Better use of this folder</li>
+ </ul>
    </div>
  
  </div>

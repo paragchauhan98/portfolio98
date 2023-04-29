@@ -75,14 +75,14 @@ function showDiv(){
     //document.querySelector('.navigation').style.display="block"
     
 }
-setTimeout("showDiv()",2600)
+setTimeout("showDiv()",2400)
 function showNav(){
   
   document.querySelector('.navigation').style.display="block"
   
 }
 
-setTimeout("showNav()",4200)
+setTimeout("showNav()",3000)
 // function showAbout(){
   
 //   document.querySelector('.section-about').style.display="block"
@@ -100,8 +100,9 @@ var todayTime = document.querySelector(".widgets__clock--time");
 var todayDay = document.querySelector(".widgets__clock--day");
 var aboutTodayTime = document.querySelectorAll(".about__widgets__clock--time");
 var aboutTodayDay = document.querySelectorAll(".about__widgets__clock--day");
-var nameOfDay = ["sun", "Mon", "tue", "wed", "thu", "fri", "sat"];
+var nameOfDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 var beader = document.querySelector(".header");
+var about1 = document.querySelector(".about");
 var navigation=document.querySelector('.nav');
 
 
@@ -128,9 +129,11 @@ function printTime() {
   if (hour > 12) {
     hour = hour - 12;
     period = "PM";
-    beader.style.backgroundImage="linear-gradient( to bottom, rgb(0, 0, 0) 45%,rgb(138, 9, 9) 135%)"
+    // beader.style.backgroundImage="linear-gradient( to bottom, rgb(0, 0, 0) 45%,rgb(138, 9, 9) 135%)"
+    // about1.style.backgroundImage="linear-gradient( to bottom, rgb(0, 0, 0) 45%,rgb(138, 9, 9) 135%)"
    // document.getElementsByClassName("header").style.backgroundImage ="linear-gradient( to bottom, rgb(black) 45%,rgb(red) 135%)"
- 
+  //  beader.style.backgroundImage="url(../img/apple2.jpg)"
+  //  about1.style.backgroundImage="url(../img/apple2.jpg)"
   }
  
 
@@ -156,10 +159,10 @@ function printTime() {
 printTime();
 
 //for weather
-var temp = document.querySelector(".widgets__clock--temp");
+var temp = document.querySelector(".widgets__weather--temp");
 console.log(temp);
 
-var icons = document.querySelector(".widgets__clock--icon");
+var icons = document.querySelector(".widgets__weather--icon");
 console.log(icons);
 //converting kelvin to celsius
 function convert(val) {
@@ -404,6 +407,7 @@ let macWindow=document.querySelector('.window')
 let macWindow2=document.querySelector('.window2')
 let macWindow3=document.querySelector('.window3')
 let macWindow4=document.querySelector('.window4')
+let macWindow5=document.querySelector('.window5')
 let folder=document.querySelector('.folder')
 let invisible=document.querySelector('.invisible')
 
@@ -429,6 +433,12 @@ function onCloser4(){
   macWindow4.classList.add('hide')
   macWindow4.classList.remove('min')
   macWindow4.classList.remove('openFolder')
+  // macWindow3.style.display="none"
+}
+function onCloser5(){
+  macWindow5.classList.add('hide')
+  macWindow5.classList.remove('min')
+  macWindow5.classList.remove('openFolder')
   // macWindow3.style.display="none"
 }
 function onMax(){
@@ -507,8 +517,8 @@ function onMin3(){
   //macWindow3.classList.add('hide')
 }
 function onMin4(){
-  macWindow3.classList.remove('openFolder')
-  macWindow3.classList.add('min')
+  macWindow4.classList.remove('openFolder')
+  macWindow4.classList.add('min')
 }
 
 function openFolder(){
@@ -558,6 +568,13 @@ function openFolder4(){
   macWindow4.classList.remove('hide')
  
   macWindow4.classList.remove('min')
+}
+function openDocx(){
+  macWindow5.classList.add('openFolder1')
+  macWindow.classList.add('hide')
+  macWindow5.classList.remove('hide')
+ 
+  macWindow5.classList.remove('min')
 }
 //////image preview
 let imgPrev1=document.querySelector('.popup')

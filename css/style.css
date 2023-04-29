@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'dune-rise';
-  /*a name to be used later*/
-  src: url("../css/fonts/kizard.otf");
-  /*URL to font*/ }
-
 @keyframes moveInBack {
   0% {
     opacity: 0;
@@ -14,21 +8,9 @@
 
 @keyframes header {
   0% {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(150rem) translateZ(0); }
-  50% {
-    opacity: .5;
-    filter: blur(5px);
-    transform: translateX(0) scale(0.5) translateZ(-40rem); }
-  90% {
-    opacity: .5;
-    filter: blur(5px);
-    transform: translateX(0) scale(0.9) translateZ(-40rem); }
+    transform: scale(0.4); }
   100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0) translateZ(0rem); } }
+    transform: scale(1); } }
 
 @keyframes mini {
   0% {
@@ -41,12 +23,6 @@
     transform: rotateX(2deg); }
   100% {
     transform: rotateX(-2deg); } }
-
-@keyframes timer {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 
 @keyframes widgets {
   0% {
@@ -116,6 +92,21 @@
   100% {
     transform: rotateX(-5deg); } }
 
+@keyframes textBouncing {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1; } }
+
+@keyframes iconRotate {
+  0% {
+    transform: scale(1.1) rotate(360deg); }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -127,7 +118,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: dune-rise;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none; }
   body::-webkit-scrollbar {
@@ -150,11 +141,11 @@ body {
 
 .about {
   position: fixed;
-  animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
+  animation: header .5s linear,headerRotate 2s linear 4s infinite;
   width: 100%;
   height: 100vh;
   background-size: 100% 100vh;
-  background-image: linear-gradient(to bottom, rgba(23, 60, 162, 0.597) 45%, rgba(151, 172, 255, 0.597) 135%); }
+  background-image: url("../../img/apple.jpg"); }
 
 .about__container {
   width: 100%;
@@ -182,13 +173,13 @@ body {
     overflow: hidden;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.06); }
     .about__section__box:nth-child(1) {
-      animation: textMessage .5s linear 1.25s; }
+      animation: textMessage .5s linear .25s; }
     .about__section__box:nth-child(2) {
-      animation: textMessage .5s linear 1.35s; }
+      animation: textMessage .5s linear .35s; }
     .about__section__box:nth-child(3) {
-      animation: textMessage .5s linear 1.45s; }
+      animation: textMessage .5s linear .45s; }
     .about__section__box:nth-child(4) {
-      animation: textMessage .5s linear 1.50s; }
+      animation: textMessage .5s linear .50s; }
   .about__section__topbar {
     height: 2.5rem;
     position: relative;
@@ -256,88 +247,50 @@ body {
   opacity: 1;
   color: #36454f; }
 
-.outer {
-  position: absolute;
-  z-index: 2000;
-  background: #b4b4b4;
-  opacity: 0.9;
-  display: block;
-  width: 100%;
-  top: 0%;
-  padding: .5rem 0rem;
-  left: 0;
-  animation: widgets 1.25s linear; }
-  .outer.macBar {
-    background: #f6f6f6;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #dadada));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #f6f6f6 0%, #dadada 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dadada',GradientType=0 );
-    /* IE6-9 */ }
-  .outer .dot {
-    display: inline-block;
-    opacity: 0;
-    animation: widgets 1.25s linear .5s;
-    width: 1.3rem;
-    height: 1.3rem;
-    background: #f9f9f9;
-    border-radius: 50%;
-    margin-left: .5rem; }
-    .outer .dot.red {
-      background: #FF6057;
-      border: 1px solid #E14640; }
-    .outer .dot.amber {
-      background: #FFBD2E;
-      border: 1px solid #DFA123; }
-    .outer .dot.green {
-      background: #27C93F;
-      border: 1px solid #1DAD2B; }
-
 .widgets__clock {
   position: absolute;
   z-index: 20000;
-  top: .39rem;
-  right: 0rem;
+  bottom: 3rem;
+  left: 5rem;
   display: flex;
   flex-direction: row;
   font-size: 1.4rem;
-  color: #A27BB8;
-  animation: widgets 1.25s linear .5s; }
+  color: white; }
   .widgets__clock--day {
     margin-right: 2rem;
     align-self: center; }
   .widgets__clock--time {
     margin-right: 2rem;
     align-self: center; }
-  .widgets__clock--icon {
-    font-size: 1.5rem;
-    transition: all .2s linear;
-    align-self: center; }
-    .widgets__clock--icon:hover {
-      transform: rotateZ(366deg); }
   .widgets__clock--city {
     margin-right: 2rem;
     align-self: center; }
-  .widgets__clock--temp {
+
+.widgets__weather {
+  position: absolute;
+  z-index: 20000;
+  bottom: 3rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4rem;
+  color: white; }
+  .widgets__weather--temp {
     margin-right: 2rem;
-    margin-top: -.1rem;
     align-self: center; }
-  .widgets__clock--icon {
+  .widgets__weather--icon {
     margin-right: 2rem;
     align-self: center; }
-    .widgets__clock--icon img {
+    .widgets__weather--icon img {
       width: 2rem;
       height: auto; }
+  .widgets__weather--icon1 {
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    transition: all .2s linear;
+    align-self: center; }
+    .widgets__weather--icon1:hover {
+      transform: rotateZ(366deg); }
 
 .whole-folder {
   display: flex;
@@ -413,8 +366,9 @@ body {
     height: 100%;
     background-color: white;
     position: absolute;
+    margin-top: -5px;
     border-radius: var(--folder-radius);
-    transform: scaleX(0.95) scaleY(0.8);
+    transform: scaleX(0.95) scaleY(1.3);
     transform-origin: bottom;
     transition: transform .3s;
     opacity: 0; }
@@ -593,6 +547,13 @@ body {
     border-bottom-right-radius: 5px;
     line-height: 300px;
     text-align: center; }
+    .window2__winbody__container {
+      width: 9rem;
+      height: 9rem;
+      display: flex;
+      flex-direction: row; }
+      .window2__winbody__container--images:hover {
+        animation: iconRotate 1s ease-in; }
 
 .window3 {
   width: 90%;
@@ -649,7 +610,7 @@ body {
     background: #e7e7e7;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    line-height: 300px;
+    line-height: 4rem;
     text-align: center; }
 
 .window4 {
@@ -710,6 +671,81 @@ body {
     line-height: 300px;
     text-align: center; }
 
+.window5 {
+  width: 90%;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  position: absolute;
+  top: 29%;
+  left: 5%;
+  z-index: 10000;
+  display: none; }
+  .window5__winhead {
+    height: 35px;
+    background: #f4f4f4;
+    border-bottom: 0.5px solid rgba(162, 163, 164, 0.4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    z-index: 10000;
+    align-items: center;
+    position: relative; }
+    .window5__winhead__btn {
+      display: flex;
+      align-items: center;
+      z-index: 9; }
+      .window5__winhead__btn--close {
+        width: 12px;
+        height: 12px;
+        margin-left: 6px;
+        border-radius: 50%;
+        background: #e74546;
+        border: 0.5px solid #d04343; }
+      .window5__winhead__btn--min {
+        width: 12px;
+        height: 12px;
+        margin-left: 6px;
+        border-radius: 50%;
+        background: #f6b427;
+        border: 0.5px solid #d49a3a; }
+      .window5__winhead__btn--max {
+        width: 12px;
+        height: 12px;
+        margin-left: 6px;
+        border-radius: 50%;
+        border: 0.5px solid #68f840;
+        background: #56ca35; }
+    .window5__winhead__title {
+      position: absolute;
+      width: 100%;
+      text-align: center; }
+  .window5__winbody {
+    height: 100%;
+    background: #e7e7e7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center; }
+    .window5__winbody--intro {
+      position: absolute;
+      overflow: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      width: 60%;
+      height: 100%;
+      margin-top: 3.5rem; }
+      .window5__winbody--intro p {
+        animation: textBouncing 1s linear;
+        margin-top: 4em;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+        line-height: 2rem; }
+
 .max {
   display: block;
   width: 90%;
@@ -722,6 +758,15 @@ body {
 .openFolder {
   display: block;
   width: 90%;
+  height: 80vh;
+  position: absolute;
+  top: 15%;
+  z-index: 1000;
+  left: 5%; }
+
+.openFolder1 {
+  display: block;
+  width: 70%;
   height: 80vh;
   position: absolute;
   top: 15%;
@@ -762,7 +807,8 @@ body {
   background: #eee; }
 
 .name1 {
-  text-align: center; }
+  text-align: center;
+  margin-left: 2rem; }
 
 .chat-image {
   padding: 4rem 2rem 0 2rem;
@@ -772,7 +818,7 @@ body {
   animation: imageblowing 2s linear infinite; }
 
 .popup {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: white;
   width: 100%;
   position: fixed;
   top: 0;
@@ -798,7 +844,7 @@ body {
     color: red; }
 
 .popup2 {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: white;
   width: 100%;
   position: fixed;
   top: 0;
@@ -879,11 +925,11 @@ a {
     color: green; }
 
 .header {
-  background-image: linear-gradient(to bottom, rgba(23, 60, 162, 0.597) 45%, rgba(151, 172, 255, 0.597) 135%);
   background-size: 100% 100vh;
+  background-image: url("../../img/apple.jpg");
   background-repeat: no-repeat;
   height: 100vh;
-  animation: header 1.5s linear,headerRotate 2s linear 4s infinite;
+  animation: header .5s linear,headerRotate 2s linear 4s infinite;
   width: 100%;
   display: none; }
   .header__textbox {
@@ -964,19 +1010,30 @@ a {
   .countdown {
     margin-left: 0;
     margin-top: 0; }
+  .header__line-1, .header__line-2, .header__line-3, .header__line-4, .header__line-5 {
+    display: none; }
+  .logo {
+    display: none; }
   .widgets__clock {
     position: absolute;
-    left: 1rem;
-    display: inline-block;
-    text-align: end;
-    width: 90%;
+    z-index: 20000;
+    top: -90%;
+    left: 2.5rem;
     display: flex;
     flex-direction: row;
-    font-size: 1.2rem;
-    color: #A27BB8;
-    animation: widgets_mob 1.25s linear .5s; }
+    font-size: 1.4rem;
+    color: white; }
+  .widgets__weather {
+    position: absolute;
+    z-index: 20000;
+    top: -90%;
+    right: 1rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    color: white; }
   .header {
-    animation: header__mob 1.5s linear;
+    animation: header 1.25s linear,headerRotate 2s linear 4s infinite;
     height: 100vh; } }
 
 .heading__primary {
