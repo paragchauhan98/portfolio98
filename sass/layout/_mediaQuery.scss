@@ -2,9 +2,16 @@
 @media screen and (max-width: 860px) {
     .about__container{
         display: none;
+      
+       
     }
     .whole-folder{
         width: 100%;
+        z-index: 10000;
+   
+    }
+    .folder{
+        z-index: 1000000;
     }
     body{
         padding: 0 0;
@@ -13,9 +20,7 @@
         margin-left: 0;
         margin-top: 0;
     }
-    .header__line-1,.header__line-2,.header__line-3,.header__line-4,.header__line-5{
-        display: none;
-    }
+  
   .logo{
     display: none;
   }
@@ -68,6 +73,7 @@
         .nav{
           position: fixed;
           bottom: 5%;
+          z-index: 10000000;
           left: 50%;
           transform: translate(-50%,-10%);
             width: 45%;
@@ -90,7 +96,4 @@
     }
 
     // sidebar menu
-    @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-      }
+   

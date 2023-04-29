@@ -296,7 +296,8 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 10000000; }
   .whole-folder .folder {
     width: var(--folder-size);
     height: calc(var(--folder-size) * 0.6);
@@ -761,7 +762,7 @@ body {
   height: 80vh;
   position: absolute;
   top: 15%;
-  z-index: 1000;
+  z-index: 1000000;
   left: 5%; }
 
 .openFolder1 {
@@ -1004,14 +1005,15 @@ a {
   .about__container {
     display: none; }
   .whole-folder {
-    width: 100%; }
+    width: 100%;
+    z-index: 10000; }
+  .folder {
+    z-index: 1000000; }
   body {
     padding: 0 0; }
   .countdown {
     margin-left: 0;
     margin-top: 0; }
-  .header__line-1, .header__line-2, .header__line-3, .header__line-4, .header__line-5 {
-    display: none; }
   .logo {
     display: none; }
   .widgets__clock {
@@ -1043,6 +1045,7 @@ a {
   .nav {
     position: fixed;
     bottom: 5%;
+    z-index: 10000000;
     left: 50%;
     transform: translate(-50%, -10%);
     width: 45%; }
@@ -1054,12 +1057,6 @@ a {
 @media screen and (max-width: 720px) {
   .nav {
     width: 60%; } }
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px; }
-  .sidenav a {
-    font-size: 18px; } }
 
 .navigation {
   display: none;

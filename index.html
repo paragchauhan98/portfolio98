@@ -26,8 +26,8 @@
     <nav class="navigation">
       <div class="nav">
         <ul class="nav__list">
-          <li class="nav__listItem"><a href="#" id="home" class="nav__links" onclick="currentSlide(1)">Home</a></li>
-          <li class="nav__listItem"><a href="#" id="about" class="nav__links" onclick="currentSlide(2)">About</a></li>
+          <li class="nav__listItem"><a href="#" id="home" class="nav__links" onclick="currentSlide(1)" ontouchstart="currentSlide(1)">Home</a></li>
+          <li class="nav__listItem"><a href="#" id="about" class="nav__links" onclick="currentSlide(2)" ontouchstart="currentSlide(2)">About</a></li>
           <li class="nav__listItem"><a href="#" class="nav__links">work</a></li>
           <li class="nav__listItem"><a href="#" class="nav__links">contact</a></li>
           <!-- <li class="nav__listItem invisible"><a href="#" class="nav__links">box</a></li> -->
@@ -185,7 +185,7 @@
      
 </div> 
 <div class="whole-folder">
-<div class="folder" onclick="openFolder()">
+<div class="folder" onclick="openFolder()" ontouchstart="openFolder()">
  <div class="feuille">
   <p class="text">Profile
   </p>

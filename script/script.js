@@ -392,11 +392,11 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  // dots[slideIndex-1].className += "active";
 }
 setTimeout("showSlides(slideIndex)",2600)
 setTimeout("showSlides(n) ",2600)
-setTimeout("function currentSlide(n)",2600)
+// setTimeout("function currentSlide(n)",2600)
 
 
 ///folder
@@ -530,6 +530,7 @@ function openFolder(){
   // macWindow.style.position="abosolute"
   // macWindow.style.top="15%"
   // macWindow.style.left="5%"
+  console.log("hello clicked")
   macWindow.classList.add('openFolder')
    macWindow.classList.remove('min')
   macWindow.classList.remove('hide')
