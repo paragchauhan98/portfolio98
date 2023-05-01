@@ -3,16 +3,52 @@
     .about__container{
         display: none; 
     }
-    #folder123{
-
+    .folder-name{
+        display: block;
     }
+    .openFolder{
+        display:block;
+        width:98%;
+      height:80vh;
+        position:absolute;
+        top:15%;
+        z-index: 10000;
+        left: 1%;
+    }
+    .popup{
+        height: 90vh;
+        top: 5%;
+    }
+    .popup__chat-image{
+        position: absolute;
+      top: 50%;
+      left:50%;
+      
+      transform: translate(-50%,-50%);
+      border-radius: 5px;
+      width: 80%;
+      height: 70%;
+    }
+    .popup2{
+        height: 90vh;
+        top: 5%;
+    }
+    .popup2__chat-image{
+        position: absolute;
+      top: 50%;
+      left:50%;
+      
+      transform: translate(-50%,-50%);
+      border-radius: 5px;
+      width: 80%;
+      height: 70%;
+    }
+    
     .whole-folder{
         width: 100%;
-        z-index: 100000000000000000000000000000;
+       
 
-        .folder{
-            z-index: 100000000000000000000000000000000;
-        }
+      
    
     }
  
@@ -29,8 +65,9 @@
   }
     .widgets__clock{
         position: absolute;
-        z-index: 20000;
-        top: -90%;
+        z-index: 1;
+        top: -2%;
+        height: 50px;
         left: 2.5rem;
         display: flex;
         flex-direction: row;
@@ -42,8 +79,9 @@
     }
     .widgets__weather{
         position: absolute;
-        z-index: 20000;
-        top: -90%;
+        z-index: 1;
+        top: -2%;
+        height: 50px;
         right: 1rem;
         display: flex;
         flex-direction: row;
@@ -76,7 +114,7 @@
         .nav{
           position: fixed;
           bottom: 5%;
-          z-index: 100000;
+        
           left: 50%;
           transform: translate(-50%,-10%);
             width: 45%;

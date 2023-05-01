@@ -293,7 +293,7 @@ body {
       transform: rotateZ(366deg); }
 
 .whole-folder {
-  z-index: 10000;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -305,12 +305,11 @@ body {
     border-radius: var(--folder-radius);
     position: relative;
     top: 4rem;
-    z-index: 1000;
     left: 3rem;
     border-top-left-radius: 0;
     cursor: pointer;
     transition: width .3s .3s, height .3s .3s;
-    margin-top: 3rem; }
+    margin-top: 4rem; }
   .whole-folder .folder, .whole-folder .folder::before {
     box-shadow: var(--folder-shadow);
     -webkit-box-shadow: var(--folder-shadow);
@@ -325,7 +324,7 @@ body {
     top: calc(0px - (var(--folder-size) / 10 / 1.5));
     border-top-left-radius: var(--folder-radius);
     border-top-right-radius: var(--folder-radius);
-    z-index: 0;
+    z-index: -1;
     transition: width .3s .3s, height .3s .3s, top .3s .3s; }
   .whole-folder .folder::after {
     background-color: #191919;
@@ -387,6 +386,7 @@ body {
 .folder-name {
   position: absolute;
   top: 7.5rem;
+  display: none;
   width: 100%;
   text-align: center;
   font-size: 1.4rem; }
@@ -399,7 +399,7 @@ body {
   position: absolute;
   top: 20%;
   left: 5%;
-  z-index: 100000000;
+  z-index: 1000;
   display: none; }
   .window__winhead {
     height: 35px;
@@ -1012,11 +1012,40 @@ a {
 @media screen and (max-width: 860px) {
   .about__container {
     display: none; }
+  .folder-name {
+    display: block; }
+  .openFolder {
+    display: block;
+    width: 98%;
+    height: 80vh;
+    position: absolute;
+    top: 15%;
+    z-index: 10000;
+    left: 1%; }
+  .popup {
+    height: 90vh;
+    top: 5%; }
+  .popup__chat-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 80%;
+    height: 70%; }
+  .popup2 {
+    height: 90vh;
+    top: 5%; }
+  .popup2__chat-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 80%;
+    height: 70%; }
   .whole-folder {
-    width: 100%;
-    z-index: 100000000000000000000000000000; }
-    .whole-folder .folder {
-      z-index: 100000000000000000000000000000000; }
+    width: 100%; }
   body {
     padding: 0 0; }
   .countdown {
@@ -1026,8 +1055,9 @@ a {
     display: none; }
   .widgets__clock {
     position: absolute;
-    z-index: 20000;
-    top: -90%;
+    z-index: 1;
+    top: -2%;
+    height: 50px;
     left: 2.5rem;
     display: flex;
     flex-direction: row;
@@ -1035,8 +1065,9 @@ a {
     color: white; }
   .widgets__weather {
     position: absolute;
-    z-index: 20000;
-    top: -90%;
+    z-index: 1;
+    top: -2%;
+    height: 50px;
     right: 1rem;
     display: flex;
     flex-direction: row;
@@ -1053,7 +1084,6 @@ a {
   .nav {
     position: fixed;
     bottom: 5%;
-    z-index: 100000;
     left: 50%;
     transform: translate(-50%, -10%);
     width: 45%; }
