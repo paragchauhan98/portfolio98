@@ -520,9 +520,8 @@ function onMin4(){
   macWindow4.classList.remove('openFolder')
   macWindow4.classList.add('min')
 }
-let folder123 = document.querySelector("#folder123");
-
-let openFolder =function (){
+let folder123=document.getElementById("folder123")
+function openFolder(){
   // macWindow.classList.remove('hide')
   // macWindow.classList.add('show')
   // macWindow.style.display="block"
@@ -535,19 +534,8 @@ let openFolder =function (){
   macWindow.classList.add('openFolder')
    macWindow.classList.remove('min')
   macWindow.classList.remove('hide')
-
-  window.alert("fuck you")
-  
 }
-
-folder123.addEventListener("click", openFolder);
-folder123.addEventListener('touchend', (e) => {
-  // prevent duplicate clicks
-  e.preventDefault()
-
-  e.target.dispatchEvent(new Event('click'))
-})
-
+folder123.addEventListener("touchstart", function() {}, true);
 function openFolder2(){
   //macWindow2.style.display="block"
   macWindow2.classList.add('openFolder')
