@@ -296,8 +296,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 100%;
-  z-index: 1000; }
+  width: 100%; }
   .whole-folder .folder {
     width: var(--folder-size);
     height: calc(var(--folder-size) * 0.6);
@@ -399,7 +398,7 @@ body {
   position: absolute;
   top: 20%;
   left: 5%;
-  z-index: 1000;
+  z-index: 100000000;
   display: none; }
   .window__winhead {
     height: 35px;
