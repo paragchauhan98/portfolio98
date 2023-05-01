@@ -520,9 +520,7 @@ function onMin4(){
   macWindow4.classList.remove('openFolder')
   macWindow4.classList.add('min')
 }
-let folder123=document.getElementById("folder123")
-folder123.addEventListener('click', openFolder)
-folder123.addEventListener('touchstart', openFolder)
+
 function openFolder(){
   // macWindow.classList.remove('hide')
   // macWindow.classList.add('show')
