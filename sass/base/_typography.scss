@@ -15,7 +15,7 @@ body{
         
         font-weight: 300;
         padding-bottom: 1rem;
-        animation: moveInBack 1s linear;
+        animation: moveInBack .5s linear;
         transform-origin: top;
     // &::before{
     //     content:'Parag chauhan';
@@ -29,7 +29,11 @@ body{
     //     padding-bottom: 1rem;
     //     z-index:-1;
 
-      
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
      
     }
 
@@ -37,7 +41,7 @@ body{
         font-size: 1.4rem;
         line-height: 2rem;
         font-weight: 700;
-        animation: moveInBack 1s linear;
+        animation: moveInBack .5s linear;
         transform-origin: top;
         letter-spacing:1.5px;
     }

@@ -128,14 +128,18 @@ body {
   font-size: 9.4rem;
   font-weight: 300;
   padding-bottom: 1rem;
-  animation: moveInBack 1s linear;
+  animation: moveInBack .5s linear;
   transform-origin: top; }
+  .heading__primary .clearfix::after {
+    content: "";
+    clear: both;
+    display: table; }
 
 .heading__tertiary {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 700;
-  animation: moveInBack 1s linear;
+  animation: moveInBack .5s linear;
   transform-origin: top;
   letter-spacing: 1.5px; }
 
@@ -258,12 +262,15 @@ body {
   color: white; }
   .widgets__clock--day {
     margin-right: 2rem;
+    display: none;
     align-self: center; }
   .widgets__clock--time {
+    display: none;
     margin-right: 2rem;
     align-self: center; }
   .widgets__clock--city {
     margin-right: 2rem;
+    display: none;
     align-self: center; }
 
 .widgets__weather {
@@ -277,9 +284,11 @@ body {
   color: white; }
   .widgets__weather--temp {
     margin-right: 2rem;
+    display: none;
     align-self: center; }
   .widgets__weather--icon {
     margin-right: 2rem;
+    display: none;
     align-self: center; }
     .widgets__weather--icon img {
       width: 2rem;
@@ -287,13 +296,14 @@ body {
   .widgets__weather--icon1 {
     margin-right: 2rem;
     font-size: 1.5rem;
+    display: none;
     transition: all .2s linear;
     align-self: center; }
     .widgets__weather--icon1:hover {
       transform: rotateZ(366deg); }
 
 .whole-folder {
-  z-index: 10;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -399,7 +409,7 @@ body {
   position: absolute;
   top: 20%;
   left: 5%;
-  z-index: 1000;
+  z-index: 100000;
   display: none; }
   .window__winhead {
     height: 35px;
@@ -705,7 +715,7 @@ body {
     .window5__winhead__btn {
       display: flex;
       align-items: center;
-      z-index: 9; }
+      z-index: 19; }
       .window5__winhead__btn--close {
         width: 12px;
         height: 12px;
@@ -779,7 +789,7 @@ body {
   height: 80vh;
   position: absolute;
   top: 15%;
-  z-index: 1000;
+  z-index: 1000000;
   left: 5%; }
 
 .min {
@@ -892,6 +902,10 @@ a {
   left: 19.4rem;
   text-align: center; }
 
+.folder-structure {
+  display: flex;
+  flex-direction: row; }
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -938,7 +952,7 @@ a {
   background-image: url("../../img/apple.jpg");
   background-repeat: no-repeat;
   height: 100vh;
-  animation: header .5s linear,headerRotate 2s linear 4s infinite;
+  animation: header .45s linear;
   width: 100%;
   display: none; }
   .header__textbox {
@@ -1044,8 +1058,29 @@ a {
     border-radius: 5px;
     width: 80%;
     height: 70%; }
+  .window5__winbody--intro {
+    width: 100%; }
+  .openFolder1 {
+    display: block;
+    width: 98%;
+    height: 80vh;
+    position: absolute;
+    top: 15%;
+    z-index: 1000000;
+    left: 1%; }
   .whole-folder {
     width: 100%; }
+  .folder-structure {
+    display: flex;
+    flex-direction: column; }
+  .name2 {
+    position: absolute;
+    z-index: 1000000;
+    top: 27.5rem;
+    left: 4.4rem;
+    text-align: center; }
+  .picture {
+    margin-left: 1.2rem; }
   body {
     padding: 0 0; }
   .countdown {
@@ -1054,19 +1089,26 @@ a {
   .logo {
     display: none; }
   .widgets__clock {
+    display: none;
     position: absolute;
     z-index: 1;
-    top: -2%;
+    top: -1%;
     height: 50px;
     left: 2.5rem;
     display: flex;
     flex-direction: row;
     font-size: 1.4rem;
     color: white; }
+  .window2__winbody__container {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; }
+  .window2__winbody__container--images {
+    width: 26%; }
   .widgets__weather {
     position: absolute;
     z-index: 1;
-    top: -2%;
+    top: -1%;
     height: 50px;
     right: 1rem;
     display: flex;
@@ -1074,7 +1116,7 @@ a {
     font-size: 1.4rem;
     color: white; }
   .header {
-    animation: header 1.25s linear,headerRotate 2s linear 4s infinite;
+    animation: header .5s linear;
     height: 100vh; } }
 
 .heading__primary {

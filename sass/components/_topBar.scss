@@ -113,6 +113,7 @@
 
 
 .widgets__clock{
+ 
   position: absolute;
   z-index: 20000;
   bottom: 3rem;
@@ -128,18 +129,19 @@
      
       &--day{
           margin-right: 2rem;
-        
+          display: none;
           align-self:center;
           
       }
       &--time{
+        display: none;
           margin-right: 2rem;
           align-self:center;
       }
    
       &--city{
           margin-right: 2rem;
-         
+          display: none;
           align-self:center;
         
       }
@@ -162,15 +164,18 @@
     &--temp{
       margin-right: 2rem;
     //  margin-top: -.1rem;
+    display: none;
       align-self:center;
       
   }
   &--icon{
       margin-right: 2rem;
+      display: none;
       align-self:center;
       
      img{
       width:2rem;
+     
       height:auto;
    
      }
@@ -178,6 +183,7 @@
   &--icon1{
     margin-right: 2rem;
     font-size:1.5rem;
+    display: none;
     transition:all .2s linear;
     align-self:center;
   &:hover{

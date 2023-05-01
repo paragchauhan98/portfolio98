@@ -63,7 +63,21 @@ function complete() {
 function hideDiv(){
     document.querySelector('.countdown').style.display='none'
 }
-setTimeout("hideDiv()",3000)
+setTimeout("hideDiv()",2000)
+function hideWidgetsClock(){
+  document.querySelector('.widgets__clock--day').style.display='block'
+  document.querySelector('.widgets__clock--time').style.display='block'
+  document.querySelector('.widgets__clock--city').style.display='block'
+
+}
+setTimeout("hideWidgetsClock()",3000)
+setTimeout("hideDiv()",2000)
+function hideWidgetsWeather(){
+  document.querySelector('.widgets__weather--temp').style.display='block'
+  document.querySelector('.widgets__weather--icon').style.display='block'
+  document.querySelector('.widgets__weather--icon1').style.display='block'
+}
+setTimeout("hideWidgetsWeather()",3000)
 
 //show and hide div of loader
 
@@ -75,7 +89,7 @@ function showDiv(){
     //document.querySelector('.navigation').style.display="block"
     
 }
-setTimeout("showDiv()",2400)
+setTimeout("showDiv()",2100)
 function showNav(){
   
   document.querySelector('.navigation').style.display="block"
@@ -438,6 +452,7 @@ function onCloser4(){
 function onCloser5(){
   macWindow5.classList.add('hide')
   macWindow5.classList.remove('min')
+  macWindow5.classList.remove('openFolder1')
   macWindow5.classList.remove('openFolder')
   // macWindow3.style.display="none"
 }

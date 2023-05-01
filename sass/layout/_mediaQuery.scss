@@ -43,15 +43,38 @@
       width: 80%;
       height: 70%;
     }
-    
+
+    .window5__winbody--intro{
+        width: 100%;
+    }
+    .openFolder1{
+        display:block;
+        width:98%;
+      height:80vh;
+        position:absolute;
+        top:15%;
+        z-index: 1000000;
+        left:1%;
+      }
     .whole-folder{
         width: 100%;
-       
 
-      
-   
     }
- 
+    .folder-structure{
+        display: flex;
+        flex-direction: column;
+      }
+      .name2{
+        position: absolute;
+        z-index: 1000000;
+        top: 27.5rem;
+        left:4.4rem;
+        
+            text-align: center;
+            }
+            .picture{
+                margin-left: 1.2rem;
+            }
     body{
         padding: 0 0;
     }
@@ -64,9 +87,10 @@
     display: none;
   }
     .widgets__clock{
+        display: none;
         position: absolute;
         z-index: 1;
-        top: -2%;
+        top: -1%;
         height: 50px;
         left: 2.5rem;
         display: flex;
@@ -77,10 +101,22 @@
        
 
     }
+    .window2__winbody__container{
+  
+        flex-wrap: wrap;
+     width: 100%;
+     justify-content: center;
+    
+    
+    }
+    .window2__winbody__container--images{
+        width: 26%;
+
+    }
     .widgets__weather{
         position: absolute;
         z-index: 1;
-        top: -2%;
+        top: -1%;
         height: 50px;
         right: 1rem;
         display: flex;
@@ -97,7 +133,7 @@
    
         
 
-   animation: header 1.25s linear,headerRotate 2s linear 4s infinite;
+   animation: header .5s linear;
    height: 100vh;
    
         
