@@ -1,5 +1,5 @@
 .window{
-  
+
     display:flex;
     flex-direction:column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -67,7 +67,7 @@
     background:rgb(231,231,231);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    
+    margin-top: -1px;
     display: flex;
    
     a {
@@ -268,6 +268,7 @@
     border-bottom-right-radius: 5px;
     line-height:300px;
     text-align:center;
+    margin-top: -1px;
    &__container{
     width: 9rem;
     height: 9rem;
@@ -354,6 +355,13 @@
   border-bottom-right-radius: 5px;
  line-height: 4rem;
   text-align:center;
+  margin-top: -1px;
+  p{
+    font-size: 2rem;
+  }
+ ul{
+  font-size: 1.3rem;
+ }
 }
 }
 
@@ -429,7 +437,7 @@ height: 45rem;
   border-bottom-right-radius: 5px;
   line-height:300px;
   text-align:center;
-
+  margin-top: -1px;
   //somthing
   
 }
@@ -505,7 +513,7 @@ height: 45rem;
   background:rgb(231,231,231);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  
+  margin-top: -1px;
   text-align:center;
 
   &--intro{
@@ -519,9 +527,9 @@ height: 45rem;
     height: 100%;
 margin-top: 3.5rem;
     p{
-      animation: textBouncing 1s linear ;
+     
      margin-top: 4em;
-      text-align: center;
+      text-align: justify;
       width: 100%;
    font-size: 1.5rem;
       line-height: 2rem;
@@ -531,7 +539,228 @@ margin-top: 3.5rem;
   
 }
 }
+.window6{
+  width: 90%;
+ height: 45rem;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius:5px;
+  position: absolute;
+  top:35%;
+  left: 5%;
+  // z-index: 100000;
+  display: none;
+  
 
+&__winhead{
+  height:35px;
+  background:rgb(244,244,244);
+  border-bottom:0.5px solid rgba(162,163,164,.4);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display:flex;
+  align-items:center;
+  position: relative;
+  z-index: 100000;
+
+&__btn{
+  display:flex;
+  align-items:center;
+  z-index:9;
+
+  
+&--close{
+  width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  background:rgb(231,69,70);
+  border:0.5px solid rgb(208,67,67);
+}
+&--min{
+   width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  background:rgb(246,180,39);
+  border:0.5px solid rgb(212,154,58);
+}
+&--max{
+  width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  border:0.5px solid rgb(104, 248, 64);
+  background:rgb(86,202,53);
+}
+}
+&__title{
+  position: absolute;
+  width:100%;
+  text-align:center;
+}
+}
+&__winbody{
+  height:100%;
+  background:rgb(231,231,231);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+ line-height: 4rem;
+  text-align:center;
+  margin-top: -1px;
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .item {
+    min-height: 86px;
+    width: 118px;
+    position: relative;
+    z-index: 1;
+    background-repeat: none;
+    background-size: 100%;
+    display: inline-block;
+    margin: 2rem;
+    
+    &.folder1 {
+    background-image: url(../../img/case-study.png);
+    background-size: 10rem 10rem;
+    background-repeat: no-repeat;
+    margin-left: 5rem;
+    }
+ 
+    
+   
+    
+    &.empty {
+      &:after, .number  {
+        display: none;
+      }
+    }
+     
+    }
+    
+  }
+}
+.window6__winbody ul{
+  list-style-type: none;
+}
+
+.window7{
+  width: 90%;
+height: 45rem;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius:5px;
+  position: absolute;
+  top:29%;
+  left: 5%;
+  z-index: 10000;
+  display: none;
+  
+
+&__winhead{
+  height:35px;
+  background:rgb(244,244,244);
+  border-bottom:0.5px solid rgba(162,163,164,.4);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display:flex;
+  z-index: 10000;
+  align-items:center;
+  position: relative;
+
+&__btn{
+  display:flex;
+  align-items:center;
+  z-index:19;
+
+  
+&--close{
+  width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  background:rgb(231,69,70);
+  border:0.5px solid rgb(208,67,67);
+}
+&--min{
+   width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  background:rgb(246,180,39);
+  border:0.5px solid rgb(212,154,58);
+}
+&--max{
+  width:12px;
+  height:12px;
+  margin-left:6px;
+ 
+  border-radius:50%;
+  border:0.5px solid rgb(104, 248, 64);
+  background:rgb(86,202,53);
+}
+}
+&__title{
+  position: absolute;
+  width:100%;
+  text-align:center;
+}
+}
+&__winbody{
+  height:100%;
+  background:rgb(231,231,231);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -1px;
+  text-align:center;
+
+  &--intro{
+    position: absolute;
+    overflow: auto;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    width: 98%;
+    height: 100%;
+margin-top: 3.5rem;
+h2{
+  margin-top: 2rem;
+  text-align: center;
+}
+h4{
+  font-size: 1.4rem;
+}
+h6{
+  font-size: 1.3rem;
+}
+h5{
+  font-size: 1.4rem;
+}
+    p{
+
+
+     margin-top: .4em;
+      text-align: justify;
+      width: 100%;
+   font-size: 1.2rem;
+      line-height: 2rem;
+    
+    }
+  }
+  
+}
+}
 .max{
   display:block;
   width:90%;
@@ -548,7 +777,7 @@ height:50rem;
 height:80vh;
   position:absolute;
   top:15%;
-  z-index: 1000000;
+  z-index: 1000000000;
   left:5%;
 }
 .openFolder1{
@@ -622,6 +851,12 @@ margin-left: 2rem;
 
     animation: imageblowing 2s linear infinite ;
   }
+  .chat-image-1{
+    padding: 4rem 2rem 0 2rem;
+    width: 100px;
+      height: 125px;
+      cursor: pointer;
+  }
   .popup {
     background-color:white;
     width: 100%;
@@ -629,7 +864,7 @@ margin-left: 2rem;
     top: 0;
     left: 0;
     display: none;
-    z-index:100000;
+    z-index:1000000000;;
     height: 100vh;
    
     
@@ -661,7 +896,7 @@ margin-left: 2rem;
     top: 0;
     left: 0;
     display: none;
-    z-index:100000;
+    z-index:1000000000;
     height: 100vh;
    
     
@@ -707,3 +942,23 @@ left:19.4rem;
       display: flex;
       flex-direction: row;
     }
+
+    .name4{
+      text-align: center;
+      margin-top: -2rem;
+      margin-left: 2rem;
+    }  
+    .name3{
+      margin-top: 7rem;
+      margin-left: -2.8rem;
+     position: absolute;
+     text-align: center;
+       }
+    .picture5{
+      margin-top: 2rem;
+      margin-left: 3rem;
+      width: 10rem;
+      
+    height: 7.5rem;
+
+    }  

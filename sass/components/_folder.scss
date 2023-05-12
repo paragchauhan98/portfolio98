@@ -1,11 +1,19 @@
 .whole-folder{
-  z-index: 10000;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 70%;
+
+}
+.whole-folder1{
+  z-index: 100000;
   display: flex;
   flex-direction: column;
   position: absolute;
   width: 100%;
 
- 
+}
 
 .folder {
     width: var(--folder-size);
@@ -117,7 +125,7 @@ z-index: -1;
   }
   
  
-}
+
 
   
   @keyframes comeon {

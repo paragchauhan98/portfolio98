@@ -422,6 +422,9 @@ let macWindow2=document.querySelector('.window2')
 let macWindow3=document.querySelector('.window3')
 let macWindow4=document.querySelector('.window4')
 let macWindow5=document.querySelector('.window5')
+let macWindow6=document.querySelector('.window6')
+let macWindow7=document.querySelector('.window7')
+let macFolder=document.querySelector('.whole-folder')
 let folder=document.querySelector('.folder')
 let invisible=document.querySelector('.invisible')
 
@@ -429,6 +432,7 @@ function onCloser(){
  macWindow.classList.add('hide')
  macWindow.classList.remove('min')
  macWindow.classList.remove('openFolder')
+ macFolder.style.width="60%"
 //  macWindow.style.display="none"
 }
 function onCloser2(){
@@ -436,25 +440,43 @@ function onCloser2(){
   macWindow2.classList.add('hide')
  macWindow2.classList.remove('min2')
  macWindow2.classList.remove('openFolder')
+ macFolder.style.width="60%"
 }
 function onCloser3(){
   macWindow3.classList.add('hide')
   macWindow3.classList.remove('min3')
   macWindow3.classList.remove('openFolder')
-  // macWindow3.style.display="none"
+  macFolder.style.width="60%"
 }
 function onCloser4(){
   macWindow4.classList.add('hide')
   macWindow4.classList.remove('min')
   macWindow4.classList.remove('openFolder')
-  // macWindow3.style.display="none"
+  macWindow.classList.remove('openFolder')
+  macFolder.style.width="60%"
 }
 function onCloser5(){
   macWindow5.classList.add('hide')
   macWindow5.classList.remove('min')
   macWindow5.classList.remove('openFolder1')
-  macWindow5.classList.remove('openFolder')
-  // macWindow3.style.display="none"
+  macWindow.classList.remove('openFolder')
+  macFolder.style.width="60%"
+}
+function onCloser6(){
+  macWindow6.classList.add('hide')
+  macWindow6.classList.remove('min')
+  // macWindow5.classList.remove('openFolder1')
+  macWindow6.classList.remove('openFolder')
+  macFolder.style.width="60%"
+  console.log("close fucjing hell")
+}
+function onCloser7(){
+  macWindow7.classList.add('hide')
+  macWindow7.classList.remove('min')
+  // macWindow5.classList.remove('openFolder1')
+  macWindow7.classList.remove('openFolder')
+  macFolder.style.width="60%"
+  console.log("close fucjing hell")
 }
 function onMax(){
   // macWindow.style.width="90%"
@@ -490,6 +512,16 @@ function onMax3(){
 function onMax4(){
   macWindow4.classList.add('max')
   macWindow4.classList.remove('min')
+}
+function onMax6(){
+  macWindow6.classList.add('max')
+  macWindow6.classList.remove('min')
+  console.log("maxnimize")
+}
+function onMax7(){
+  macWindow7.classList.add('max')
+  macWindow7.classList.remove('min')
+  console.log("maxnimize")
 }
 
 function onMin(){
@@ -535,6 +567,16 @@ function onMin4(){
   macWindow4.classList.remove('openFolder')
   macWindow4.classList.add('min')
 }
+function onMin6(){
+  macWindow6.classList.remove('openFolder')
+  macWindow6.classList.add('min')
+  console.log("minimize")
+}
+function onMin7(){
+  macWindow7.classList.remove('openFolder')
+  macWindow7.classList.add('min')
+  console.log("minimize")
+}
 
 function openFolder(){
   // macWindow.classList.remove('hide')
@@ -549,21 +591,37 @@ function openFolder(){
   macWindow.classList.add('openFolder')
    macWindow.classList.remove('min')
   macWindow.classList.remove('hide')
+  macFolder.style.width="100%"
 }
 
 function openFolder2(){
-  //macWindow2.style.display="block"
+ 
   macWindow2.classList.add('openFolder')
-  // macWindow.classList.remove('min')
+ 
   macWindow2.classList.remove('hide')
-  // macWindow2.style.display="block"
-  // macWindow2.style.width="90%"
-  // macWindow2.style.height="50rem"
-  // macWindow2.style.position="abosolute"
-  // macWindow2.style.top="20%"
-  // macWindow2.style.left="5%"
+  macFolder.style.width="100%"
   macWindow2.classList.remove('min2') 
 }
+function openPixels(){
+//  macWindow6.style.display="block"
+  macWindow6.classList.add('openFolder')
+  macFolder.style.width="100%"
+  macWindow6.classList.remove('hide')
+  macWindow6.classList.remove('min') 
+
+
+ 
+
+}
+function openImages(){
+  //  macWindow6.style.display="block"
+    macWindow7.classList.add('openFolder')
+    macWindow7.classList.remove('hide')
+    macWindow7.classList.remove('min') 
+    
+    macFolder.style.width="100%"
+  }
+
 function openFolder3(){
   macWindow3.classList.add('openFolder')
   // macWindow.classList.remove('min')
@@ -574,20 +632,21 @@ function openFolder3(){
   // macWindow3.style.position="abosolute"
   // macWindow3.style.top="25%"
   // macWindow3.style.left="5%"
+  macFolder.style.width="100%"
   macWindow3.classList.remove('min3')
 }
 function openFolder4(){
   macWindow4.classList.add('openFolder')
   macWindow.classList.add('hide')
   macWindow4.classList.remove('hide')
- 
+  macFolder.style.width="100%"
   macWindow4.classList.remove('min')
 }
 function openDocx(){
   macWindow5.classList.add('openFolder1')
   macWindow.classList.add('hide')
   macWindow5.classList.remove('hide')
- 
+  macFolder.style.width="100%"
   macWindow5.classList.remove('min')
 }
 //////image preview
